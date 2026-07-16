@@ -1,262 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Neoprene & Fabric Manufacturer | Siyin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #059669;
-      --primary-hover: #047857;
-      --dark: #0f172a;
-      --ink: #334155;
-      --ink-soft: #64748b;
-      --bg-light: #f8fafc;
-      --border: #e2e8f0;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: var(--ink);
-      background-color: #ffffff;
-      line-height: 1.5;
-    }
-
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    section { padding: 80px 0; border-bottom: 1px solid var(--border); }
-    .bg-light { background-color: var(--bg-light); }
-
-    .section-title { text-align: center; max-width: 600px; margin: 0 auto 48px; }
-    .section-title span.tag {
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--primary);
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-    .section-title h2 { font-size: 32px; color: var(--dark); font-weight: 800; }
-    .section-title p { font-size: 14px; color: var(--ink-soft); margin-top: 12px; }
-
-    /* HEADER */
-    header {
-      position: sticky; top: 0; background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);
-      z-index: 1000; height: 72px; display: flex; align-items: center;
-    }
-    .header-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-    .logo { text-decoration: none; font-size: 22px; font-weight: 800; color: var(--dark); }
-    .logo span { color: var(--primary); }
-    nav { display: flex; gap: 32px; }
-    nav a { text-decoration: none; font-size: 14px; font-weight: 600; color: var(--ink); }
-    nav a:hover { color: var(--primary); }
-    .btn-header {
-      background: var(--primary); color: #ffffff; text-decoration: none;
-      padding: 10px 18px; border-radius: 6px; font-size: 13px; font-weight: 700;
-    }
-
-    /* 1. HERO BANNER */
-    .hero { padding: 100px 0; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .hero-text h1 { font-size: 44px; line-height: 1.15; color: var(--dark); font-weight: 800; margin-bottom: 20px; }
-    .hero-text p { font-size: 16px; color: var(--ink-soft); margin-bottom: 32px; }
-    .hero-actions { display: flex; gap: 16px; }
-    .btn {
-      display: inline-flex; padding: 14px 28px; border-radius: 8px;
-      font-size: 14px; font-weight: 700; text-decoration: none;
-    }
-    .btn.primary { background: var(--dark); color: #ffffff; }
-    .btn.secondary { background: transparent; color: var(--dark); border: 1px solid var(--border); }
-    .hero-img { width: 100%; height: 380px; object-fit: cover; border-radius: 12px; }
-
-    /* 2. CUSTOMIZATION STEP GUIDE (怎么选) */
-    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .step-card {
-      background: #ffffff; border: 1px solid var(--border); border-radius: 12px;
-      overflow: hidden; transition: transform 0.2s ease;
-    }
-    .step-card:hover { transform: translateY(-4px); }
-    .step-img { height: 200px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: var(--ink-soft); font-weight: 600; }
-    .step-body { padding: 24px; }
-    .step-num { font-size: 11px; font-weight: 800; color: var(--primary); text-transform: uppercase; margin-bottom: 8px; }
-    .step-body h3 { font-size: 18px; color: var(--dark); margin-bottom: 8px; }
-    .step-body p { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
-
-    /* 3. OEM & ODM CAPABILITY (我们能为你做什么) */
-    .oem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .oem-text h3 { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 16px; }
-    .oem-text p { font-size: 15px; color: var(--ink-soft); margin-bottom: 24px; line-height: 1.6; }
-    .oem-table { width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-    .oem-table th, .oem-table td { padding: 14px 18px; text-align: left; font-size: 13px; }
-    .oem-table th { background: var(--dark); color: #ffffff; }
-    .oem-table tr { border-bottom: 1px solid var(--border); }
-
-    /* 4. FACTORY GALLERY */
-    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .gallery-item { height: 260px; background: #eaeaea; border-radius: 8px; position: relative; overflow: hidden; }
-    .gallery-label { position: absolute; bottom: 12px; left: 12px; background: rgba(15,23,42,0.85); color: #fff; padding: 4px 8px; font-size: 11px; font-weight: 700; border-radius: 4px; }
-
-    /* 5. CONTACT CTA */
-    .cta { background: var(--dark); color: #ffffff; text-align: center; padding: 80px 0; border: none; }
-    .cta-content { max-width: 500px; margin: 0 auto; }
-    .cta-content h2 { font-size: 32px; margin-bottom: 12px; }
-    .cta-content p { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 24px; }
-
-    /* FOOTER */
-    footer { background: #090d16; color: #ffffff; padding: 48px 0; }
-    .footer-grid { display: flex; justify-content: space-between; align-items: center; }
-    .footer-text { font-size: 13px; color: rgba(255,255,255,0.5); }
-  </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="wrap header-container">
-      <a href="index.html" class="logo">Siyin<span>.</span></a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About Siyin</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a href="contact.html" class="btn-header">Get Free Samples</a>
+<!-- 2. QUICK NAVIGATION (极速通道模块：放在 Banner 刚下来的位置) -->
+<section style="padding: 60px 0 40px;">
+  <div class="wrap">
+    <div class="section-title">
+      <span class="tag">Quick Finder</span>
+      <h2>What are you looking for today?</h2>
+      <p>Choose your path to locate the exact specifications or product samples instantly.</p>
     </div>
-  </header>
 
-  <!-- 1. HERO BANNER -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-text">
-        <h1>Direct Factory Neoprene &amp; Stretch Fabrics Since 2002</h1>
-        <p>We help global brands develop high-performance neoprene sheets, custom laminations, and turnkey sewn activewear/supports.</p>
-        <div class="hero-actions">
-          <a href="products.html" class="btn primary">View Swatches</a>
-          <a href="contact.html" class="btn secondary">Get Sample Swatch Book</a>
-        </div>
-      </div>
-      <div>
-        <div class="step-img" style="height:380px; border-radius:12px;">📷 Place Factory Image Here</div>
+    <!-- 维度 A：按原材料寻找 (For Material Buyers) -->
+    <div style="margin-bottom: 48px;">
+      <h3 style="font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 16px; border-left: 3px solid var(--primary); padding-left: 10px;">
+        1. Find Raw Materials &amp; Fabrics (按材料/面料找)
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+        <!-- 卡片 1 -->
+        <a href="products.html?cat=neoprene&sub=cr" style="text-decoration: none; background: var(--bg-light); border: 1px solid var(--border); padding: 20px; border-radius: 8px; display: block; transition: all 0.2s;">
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 6px;">CR Neoprene Sheets</h4>
+          <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.4;">Premium grade for wetsuits & diving gear.</p>
+        </a>
+        <!-- 卡片 2 -->
+        <a href="products.html?cat=neoprene&sub=sbr" style="text-decoration: none; background: var(--bg-light); border: 1px solid var(--border); padding: 20px; border-radius: 8px; display: block; transition: all 0.2s;">
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 6px;">SBR/SCR Sheets</h4>
+          <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.4;">Cost-effective for bags, sleeves & braces.</p>
+        </a>
+        <!-- 卡片 3 -->
+        <a href="products.html?cat=stretch" style="text-decoration: none; background: var(--bg-light); border: 1px solid var(--border); padding: 20px; border-radius: 8px; display: block; transition: all 0.2s;">
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 6px;">Activewear Jersey</h4>
+          <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.4;">High-stretch Spandex, Lycra & Nylon.</p>
+        </a>
+        <!-- 卡片 4 -->
+        <a href="products.html?cat=neoprene&sub=perforated" style="text-decoration: none; background: var(--bg-light); border: 1px solid var(--border); padding: 20px; border-radius: 8px; display: block; transition: all 0.2s;">
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 6px;">Functional Processing</h4>
+          <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.4;">Perforated, embossed & anti-slip textures.</p>
+        </a>
       </div>
     </div>
-  </section>
 
-  <!-- 2. CUSTOMIZATION STEP GUIDE (简化版：怎么选) -->
-  <section class="bg-light">
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">Easy Customization</span>
-        <h2>How to Customize Your Materials?</h2>
-        <p>No complex jargon. Build your bespoke material in 3 simple steps.</p>
-      </div>
-
-      <div class="step-grid">
-        <div class="step-card">
-          <div class="step-img">📷 [Image: Raw Neoprene Slabs]</div>
-          <div class="step-body">
-            <span class="step-num">Step 01</span>
-            <h3>Choose Core &amp; Thickness</h3>
-            <p>Select your rubber base (SBR for bags, SCR for entry wetsuits, or premium CR for professional diving) from 1.0mm to 10mm.</p>
-          </div>
-        </div>
-
-        <div class="step-card">
-          <div class="step-img">📷 [Image: Colored Fabric Rolls]</div>
-          <div class="step-body">
-            <span class="step-num">Step 02</span>
-            <h3>Choose Fabric Lamination</h3>
-            <p>Laminate your rubber with high-stretch Lycra, durable Nylon, budget Polyester, or medical-grade hook-compatible OK cloth.</p>
-          </div>
-        </div>
-
-        <div class="step-card">
-          <div class="step-img">📷 [Image: Embossed/Perforated Detail]</div>
-          <div class="step-body">
-            <span class="step-num">Step 03</span>
-            <h3>Add Functional Finishes</h3>
-            <p>Optimize your material with custom surface embossing (anti-slip sharkskin), ventilation perforation holes, or custom prints.</p>
-          </div>
-        </div>
+    <!-- 维度 B：按最终应用寻找 (For Product/Brand Buyers) -->
+    <div>
+      <h3 style="font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 16px; border-left: 3px solid var(--primary); padding-left: 10px;">
+        2. Find by Application / Finished Products (按产品/应用找)
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+        <!-- 场景 1 -->
+        <a href="products.html?app=medical" style="text-decoration: none; background: var(--bg-light); border: 1px solid var(--border); padding: 20px; border-radius: 8px; display: block; transition: all 0.2s;">
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 6px;">Sports Braces &amp; Support</h4>
+          <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.4;">Medical & protective compression gears.</p>
+        </a>
+        <!-- 场景 2 -->
+        <a href="products.html?app=bags" style="text-decoration: none; background: var(--bg-light); border: 1px solid var(--border); padding: 20px; border-radius: 8px; display: block; transition: all 0.2s;">
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 6px;">Bags &amp; Laptop Sleeves</h4>
+          <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.4;">Shockproof cases, totes & daily accessories.</p>
+        </a>
+        <!-- 场景 3 -->
+        <a href="products.html?app=wetsuits" style="text-decoration: none; background: var(--bg-light); border: 1px solid var(--border); padding: 20px; border-radius: 8px; display: block; transition: all 0.2s;">
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 6px;">Diving &amp; Water Sports</h4>
+          <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.4;">Wetsuits, surfing suits & rash guards.</p>
+        </a>
+        <!-- 场景 4 -->
+        <a href="products.html?app=apparel" style="text-decoration: none; background: var(--bg-light); border: 1px solid var(--border); padding: 20px; border-radius: 8px; display: block; transition: all 0.2s;">
+          <h4 style="font-size: 15px; color: var(--dark); margin-bottom: 6px;">Yoga &amp; Athleisure Wear</h4>
+          <p style="font-size: 12px; color: var(--ink-soft); line-height: 1.4;">High-gauge spandex and gym apparel OEM.</p>
+        </a>
       </div>
     </div>
-  </section>
 
-  <!-- 3. OEM & ODM SERVICES (能提供什么服务) -->
-  <section>
-    <div class="wrap oem-grid">
-      <div class="oem-text">
-        <h3>One-Stop OEM &amp; ODM Services</h3>
-        <p>From custom laminated raw material sheets to fully branded, retail-ready sewn products. We operate both lamination lines and a dedicated sewing workshop to handle your finished goods production.</p>
-        <p style="font-size:14px; font-weight:600; color:var(--dark);">✔ Free Lab-Dips &amp; Prototype Development</p>
-      </div>
-      <div>
-        <table class="oem-table">
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Minimum Order</th>
-              <th>Avg. Lead Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Laminated Sheets</td>
-              <td>10 Sheets</td>
-              <td>7 - 10 Days</td>
-            </tr>
-            <tr>
-              <td>Custom Textiles (Dyed)</td>
-              <td>500 Yards</td>
-              <td>12 - 15 Days</td>
-            </tr>
-            <tr>
-              <td>Sewn Supports &amp; Sleeves</td>
-              <td>500 Pcs</td>
-              <td>20 - 25 Days</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. FACTORY TOUR -->
-  <section class="bg-light">
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">Production Capability</span>
-        <h2>Our Manufacturing Facility</h2>
-        <p>A glimpse into our 8,000㎡ plant in Dongguan City, equipped with top-tier splitting and laminating lines.</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item"><div class="gallery-label">Splitting &amp; Slicing</div></div>
-        <div class="gallery-item"><div class="gallery-label">Lamination Lines</div></div>
-        <div class="gallery-item"><div class="gallery-label">Sewing &amp; QC Workshop</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. CONTACT CTA -->
-  <section class="cta">
-    <div class="wrap cta-content">
-      <h2>Get a Free Swatch Book</h2>
-      <p>Want to feel the quality yourself? Let us know your application and we'll ship a tailored sample catalog to you.</p>
-      <a href="contact.html" class="btn primary" style="background: var(--primary);">Inquire Free Samples</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap footer-grid">
-      <div class="logo" style="color: #fff;">Siyin<span>.</span></div>
-      <div class="footer-text">© 2026 Siyin Fabric. All Rights Reserved.</div>
-    </div>
-  </footer>
-
-</body>
-</html>
+  </div>
+</section>
