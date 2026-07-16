@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Neoprene & Stretch Fabric Manufacturer Since 2002 | Siyin</title>
+  <title>Premium Neoprene & Fabric Manufacturer | Siyin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2 family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #059669;
@@ -18,42 +18,19 @@
       --border: #e2e8f0;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       color: var(--ink);
       background-color: #ffffff;
       line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
     }
 
-    .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+    .bg-light { background-color: var(--bg-light); }
 
-    section {
-      padding: 90px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-bg {
-      background-color: var(--bg-light);
-    }
-
-    /* 通用标题样式（去图标后，依靠排版产生高级感） */
-    .section-title {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 56px;
-    }
-
+    .section-title { text-align: center; max-width: 600px; margin: 0 auto 48px; }
     .section-title span.tag {
       font-size: 11px;
       font-weight: 800;
@@ -63,1223 +40,221 @@
       display: inline-block;
       margin-bottom: 8px;
     }
+    .section-title h2 { font-size: 32px; color: var(--dark); font-weight: 800; }
+    .section-title p { font-size: 14px; color: var(--ink-soft); margin-top: 12px; }
 
-    .section-title h2 {
-      font-size: 34px;
-      color: var(--dark);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .section-title p {
-      font-size: 15px;
-      color: var(--ink-soft);
-      margin-top: 12px;
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       1. HEADER & NAVIGATION (Mega Menu Layout)
-       ========================================================================== */
+    /* HEADER */
     header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-      height: 72px;
-      display: flex;
-      align-items: center;
+      position: sticky; top: 0; background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);
+      z-index: 1000; height: 72px; display: flex; align-items: center;
     }
-
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-
-    .logo {
-      text-decoration: none;
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--dark);
-      letter-spacing: -0.02em;
-    }
-
-    .logo span {
-      color: var(--primary);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav-item {
-      position: relative;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--ink);
-      padding: 24px 0;
-      transition: color 0.15s ease;
-      cursor: pointer;
-    }
-
-    .nav-item:hover {
-      color: var(--primary);
-    }
-
-    /* 4列式 Mega Menu */
-    .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%) translateY(10px);
-      background: #ffffff;
-      width: 1000px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-      padding: 32px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.2s ease-in-out;
-      z-index: 200;
-    }
-
-    .nav-item:hover .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    .dropdown-group h5 {
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--dark);
-      margin-bottom: 14px;
-      padding-bottom: 8px;
-      border-bottom: 1px dashed var(--border);
-    }
-
-    .dropdown-group a {
-      display: block;
-      text-decoration: none;
-      font-size: 13px;
-      color: var(--ink-soft);
-      padding: 6px 0;
-      font-weight: 500;
-      transition: all 0.15s ease;
-    }
-
-    .dropdown-group a:hover {
-      color: var(--primary);
-      padding-left: 4px;
-    }
-
+    .header-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .logo { text-decoration: none; font-size: 22px; font-weight: 800; color: var(--dark); }
+    .logo span { color: var(--primary); }
+    nav { display: flex; gap: 32px; }
+    nav a { text-decoration: none; font-size: 14px; font-weight: 600; color: var(--ink); }
+    nav a:hover { color: var(--primary); }
     .btn-header {
-      background: var(--primary);
-      color: #ffffff;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: background 0.15s ease;
+      background: var(--primary); color: #ffffff; text-decoration: none;
+      padding: 10px 18px; border-radius: 6px; font-size: 13px; font-weight: 700;
     }
 
-    .btn-header:hover {
-      background: var(--primary-hover);
-    }
-
-    /* ==========================================================================
-       2. HERO BANNER (第1模块 - 极简大气融合排版)
-       ========================================================================== */
-    .hero {
-      padding: 100px 0 80px;
-      background: #ffffff;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.10fr 0.90fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .hero-text {
-      max-width: 580px;
-    }
-
-    .hero-text h1 {
-      font-size: 46px;
-      line-height: 1.15;
-      color: var(--dark);
-      font-weight: 800;
-      margin: 16px 0 24px;
-      letter-spacing: -0.03em;
-    }
-
-    .hero-text p {
-      font-size: 16px;
-      color: var(--ink-soft);
-      line-height: 1.6;
-      margin-bottom: 36px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-    }
-
+    /* 1. HERO BANNER */
+    .hero { padding: 100px 0; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .hero-text h1 { font-size: 44px; line-height: 1.15; color: var(--dark); font-weight: 800; margin-bottom: 20px; }
+    .hero-text p { font-size: 16px; color: var(--ink-soft); margin-bottom: 32px; }
+    .hero-actions { display: flex; gap: 16px; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.15s ease;
-      cursor: pointer;
-    }
-
-    .btn.primary {
-      background: var(--dark);
-      color: #ffffff;
-    }
-
-    .btn.primary:hover {
-      background: #000000;
-    }
-
-    .btn.secondary {
-      background: transparent;
-      color: var(--dark);
-      border: 1px solid var(--border);
-    }
-
-    .btn.secondary:hover {
-      background: var(--bg-light);
-      border-color: var(--dark);
-    }
-
-    .hero-image-container {
-      position: relative;
-    }
-
-    .hero-image-container img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-    }
-
-    /* ==========================================================================
-       3. PRODUCT CATEGORIES (第2模块 - 4大主营业务)
-       ========================================================================== */
-    .categories-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .category-card {
-      position: relative;
-      height: 360px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
-      cursor: pointer;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 24px;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .category-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.3) 60%, rgba(15, 23, 42, 0) 100%);
-      z-index: 1;
-    }
-
-    .category-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .category-card:hover::before {
-      background: linear-gradient(to top, rgba(5, 150, 105, 0.95) 0%, rgba(15, 23, 42, 0.4) 100%);
-    }
-
-    .category-card img {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    .category-content {
-      position: relative;
-      z-index: 2;
-      color: #ffffff;
-    }
-
-    .category-content h4 {
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .category-content p {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.85);
-      margin-bottom: 16px;
-      line-height: 1.4;
-    }
-
-    .category-link {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--primary);
-      background: #ffffff;
-      padding: 6px 12px;
-      border-radius: 4px;
-      display: inline-block;
-    }
-
-    /* ==========================================================================
-       4. WHY SIYIN (第3模块 - 极简无图标实力展示)
-       ========================================================================== */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .why-card {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.01);
-      transition: all 0.2s ease;
-    }
-
-    .why-card:hover {
-      border-color: var(--primary);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-    }
-
-    /* 替代ICON：用高级感的大数字来排版 */
-    .why-card .huge-number {
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1;
-      margin-bottom: 20px;
-      opacity: 0.8;
-    }
-
-    .why-card h3 {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 12px;
-    }
-
-    .why-card p {
-      font-size: 14px;
-      color: var(--ink-soft);
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       5. MATERIAL SOLUTIONS (第4模块 - 解决方案展示)
-       ========================================================================== */
-    .solutions-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-
-    .solution-item {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-    }
-
-    .solution-img {
-      width: 40%;
-      background: var(--dark);
-      object-fit: cover;
-    }
-
-    .solution-info {
-      width: 60%;
-      padding: 32px;
-    }
-
-    .solution-info h3 {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 10px;
-    }
-
-    .solution-info p {
-      font-size: 13px;
-      color: var(--ink-soft);
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .solution-tag {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      background: var(--bg-light);
-      padding: 4px 8px;
-      border-radius: 4px;
-      margin-right: 6px;
-      color: var(--dark);
-    }
-
-    /* ==========================================================================
-       6. MANUFACTURING PROCESS (第5模块 - 生产流水线)
-       ========================================================================== */
-    .process-timeline {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      position: relative;
-    }
-
-    .process-step {
-      background: #ffffff;
-      padding: 24px;
-      border-radius: 8px;
-      border-left: 4px solid var(--primary);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-    }
-
-    .step-num {
-      font-size: 13px;
-      font-weight: 800;
-      color: var(--primary);
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .process-step h4 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 8px;
-    }
-
-    .process-step p {
-      font-size: 12px;
-      color: var(--ink-soft);
-      line-height: 1.5;
-    }
-
-    /* ==========================================================================
-       7. OEM & ODM CAPABILITY (第6模块 - 生产制造实力服务)
-       ========================================================================== */
-    .oem-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .oem-text h3 {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 16px;
-    }
-
-    .oem-text p {
-      font-size: 15px;
-      color: var(--ink-soft);
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-
-    .oem-list {
-      list-style: none;
-    }
-
-    .oem-list li {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 12px;
-      padding-left: 16px;
-      position: relative;
-    }
-
-    .oem-list li::before {
-      content: '■';
-      color: var(--primary);
-      font-size: 10px;
-      position: absolute;
-      left: 0;
-      top: 1px;
-    }
-
-    .oem-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #ffffff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.03);
-    }
-
-    .oem-table th, .oem-table td {
-      padding: 16px 20px;
-      text-align: left;
-      font-size: 13px;
-    }
-
-    .oem-table th {
-      background: var(--dark);
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .oem-table tr {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .oem-table tr:last-child {
-      border-bottom: none;
-    }
-
-    /* ==========================================================================
-       8. FEATURED FABRICS (第7模块 - 明星面料)
-       ========================================================================== */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-bottom: 40px;
-    }
-
-    .card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      transition: all 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
-    }
-
-    .card-img {
-      height: 180px;
-      background: #334155;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-    }
-
-    .card-body {
-      padding: 16px;
-    }
-
-    .swatch-code {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .card-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--dark);
-      margin: 4px 0 12px;
-      height: 44px;
-      overflow: hidden;
-    }
-
-    .card-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      font-size: 12px;
-      color: var(--ink-soft);
-      border-top: 1px solid var(--border);
-      padding-top: 12px;
-    }
-
-    .meta-row {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .meta-row span:last-child {
-      color: var(--dark);
-      font-weight: 600;
-    }
-
-    /* ==========================================================================
-       9. QUALITY CONTROL & TESTING (第8模块 - 严苛质检)
-       ========================================================================== */
-    .qc-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .qc-card {
-      background: #ffffff;
-      border-top: 4px solid var(--dark);
-      padding: 32px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-      border-radius: 4px;
-    }
-
-    .qc-card h4 {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 12px;
-    }
-
-    .qc-card p {
-      font-size: 13px;
-      color: var(--ink-soft);
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       10. FACTORY GALLERY (第9模块 - 工厂实拍图)
-       ========================================================================== */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 16px;
-      height: 400px;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      background: #eaeaea;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.03);
-    }
-
-    .gallery-label {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      background: rgba(15, 23, 42, 0.85);
-      color: #ffffff;
-      padding: 6px 12px;
-      font-size: 11px;
-      font-weight: 700;
-      border-radius: 4px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    /* ==========================================================================
-       11. FAQ (第10模块 - 常见业务咨询)
-       ========================================================================== */
-    .faq-layout {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      padding: 24px;
-      border-radius: 8px;
-      margin-bottom: 16px;
-    }
-
-    .faq-item h4 {
-      font-size: 16px;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 8px;
-    }
-
-    .faq-item p {
-      font-size: 13px;
-      color: var(--ink-soft);
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       12. CONTACT CTA (第11模块 - 触底转化表单)
-       ========================================================================== */
-    .cta-section {
-      background: var(--dark);
-      color: #ffffff;
-      padding: 80px 0;
-      text-align: center;
-      border-bottom: none;
-    }
-
-    .cta-content {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .cta-content h2 {
-      font-size: 36px;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .cta-content p {
-      font-size: 16px;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 32px;
-    }
-
-    /* ==========================================================================
-       FOOTER
-       ========================================================================== */
-    footer {
-      background: #090d16;
-      color: #ffffff;
-      padding: 60px 0;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr repeat(3, 1fr);
-      gap: 48px;
-    }
-
-    .footer-logo {
-      font-size: 24px;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .footer-logo span {
-      color: var(--primary);
-    }
-
-    .footer-col h5 {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      letter-spacing: 0.05em;
-    }
-
-    .footer-col a {
-      display: block;
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    .footer-col a:hover {
-      color: var(--primary);
-    }
+      display: inline-flex; padding: 14px 28px; border-radius: 8px;
+      font-size: 14px; font-weight: 700; text-decoration: none;
+    }
+    .btn.primary { background: var(--dark); color: #ffffff; }
+    .btn.secondary { background: transparent; color: var(--dark); border: 1px solid var(--border); }
+    .hero-img { width: 100%; height: 380px; object-fit: cover; border-radius: 12px; }
+
+    /* 2. CUSTOMIZATION STEP GUIDE (怎么选) */
+    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .step-card {
+      background: #ffffff; border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; transition: transform 0.2s ease;
+    }
+    .step-card:hover { transform: translateY(-4px); }
+    .step-img { height: 200px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: var(--ink-soft); font-weight: 600; }
+    .step-body { padding: 24px; }
+    .step-num { font-size: 11px; font-weight: 800; color: var(--primary); text-transform: uppercase; margin-bottom: 8px; }
+    .step-body h3 { font-size: 18px; color: var(--dark); margin-bottom: 8px; }
+    .step-body p { font-size: 13px; color: var(--ink-soft); line-height: 1.6; }
+
+    /* 3. OEM & ODM CAPABILITY (我们能为你做什么) */
+    .oem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .oem-text h3 { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 16px; }
+    .oem-text p { font-size: 15px; color: var(--ink-soft); margin-bottom: 24px; line-height: 1.6; }
+    .oem-table { width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .oem-table th, .oem-table td { padding: 14px 18px; text-align: left; font-size: 13px; }
+    .oem-table th { background: var(--dark); color: #ffffff; }
+    .oem-table tr { border-bottom: 1px solid var(--border); }
+
+    /* 4. FACTORY GALLERY */
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .gallery-item { height: 260px; background: #eaeaea; border-radius: 8px; position: relative; overflow: hidden; }
+    .gallery-label { position: absolute; bottom: 12px; left: 12px; background: rgba(15,23,42,0.85); color: #fff; padding: 4px 8px; font-size: 11px; font-weight: 700; border-radius: 4px; }
+
+    /* 5. CONTACT CTA */
+    .cta { background: var(--dark); color: #ffffff; text-align: center; padding: 80px 0; border: none; }
+    .cta-content { max-width: 500px; margin: 0 auto; }
+    .cta-content h2 { font-size: 32px; margin-bottom: 12px; }
+    .cta-content p { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 24px; }
+
+    /* FOOTER */
+    footer { background: #090d16; color: #ffffff; padding: 48px 0; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: center; }
+    .footer-text { font-size: 13px; color: rgba(255,255,255,0.5); }
   </style>
 </head>
 <body>
 
-  <!-- HEADER NAVIGATION -->
+  <!-- HEADER -->
   <header>
     <div class="wrap header-container">
       <a href="index.html" class="logo">Siyin<span>.</span></a>
-      
       <nav>
-        <a href="index.html" class="nav-item">Home</a>
-        
-        <div class="nav-item">
-          Products ▾
-          <div class="dropdown-menu">
-            <div class="dropdown-group">
-              <h5>Neoprene Materials</h5>
-              <a href="products.html?cat=neoprene">All Neoprene Sheets</a>
-              <a href="products.html?sub=wetsuit">Wetsuit Grade (CR/SCR)</a>
-              <a href="products.html?sub=sbr">Bag &amp; Cup Materials (SBR)</a>
-              <a href="products.html?sub=perforated">Perforated Sheets</a>
-              <a href="products.html?sub=embossed">Embossed (Anti-Slip)</a>
-              <a href="products.html?sub=grs">GRS Eco-Friendly</a>
-            </div>
-            <div class="dropdown-group">
-              <h5>Stretch Fabrics</h5>
-              <a href="products.html?cat=stretch">All Activewear Fabrics</a>
-              <a href="products.html?sub=yoga">Yoga &amp; Activewear Jersey</a>
-              <a href="products.html?sub=brushed">Brushed &amp; Peach Skin</a>
-              <a href="products.html?sub=printed">Custom Digital Printed</a>
-              <a href="products.html?sub=ok-cloth">OK Cloth / Hook Compatible</a>
-            </div>
-            <div class="dropdown-group">
-              <h5>Custom OEM Services</h5>
-              <a href="oem-services.html">All Custom Services</a>
-              <a href="oem-services.html?service=yoga">Yoga Wear OEM</a>
-              <a href="oem-services.html?service=lamination">Custom Lamination</a>
-              <a href="oem-services.html?service=neoprene">Custom Neoprene Products</a>
-            </div>
-            <div class="dropdown-group">
-              <h5>Finished Products</h5>
-              <a href="products.html?cat=finished">All Finished Goods</a>
-              <a href="products.html?sub=braces">Sports Braces &amp; Supports</a>
-              <a href="products.html?sub=bags">Neoprene Bags &amp; Totes</a>
-              <a href="products.html?sub=sleeves">Laptop &amp; Tablet Sleeves</a>
-              <a href="products.html?sub=coolers">Can Coolers &amp; Bottle Koozies</a>
-              <a href="products.html?sub=pet">Pet Vests &amp; Slimming Belts</a>
-            </div>
-          </div>
-        </div>
-
-        <a href="oem-services.html" class="nav-item">OEM Solutions</a>
-        <a href="about.html" class="nav-item">About Siyin</a>
-        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Siyin</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
-      <a href="contact.html" class="btn-header">Get Free Swatch Book</a>
+      <a href="contact.html" class="btn-header">Get Free Samples</a>
     </div>
   </header>
 
   <!-- 1. HERO BANNER -->
   <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-text">
-          <span class="section-title" style="text-align: left; margin: 0;"><span class="tag">Dongguan Direct Mill Since 2002</span></span>
-          <h1>Your Prime Manufacturer for Custom Neoprene &amp; Stretch Fabrics</h1>
-          <p>
-            24 years of manufacturing excellence in high-performance lamination, functional textile knitting, and turnkey OEM products. GRS 4.0 certified.
-          </p>
-          <div class="hero-actions">
-            <a href="products.html" class="btn primary">Browse Swatch Library</a>
-            <a href="contact.html" class="btn secondary">Get Free Swatch Book</a>
-          </div>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1>Direct Factory Neoprene &amp; Stretch Fabrics Since 2002</h1>
+        <p>We help global brands develop high-performance neoprene sheets, custom laminations, and turnkey sewn activewear/supports.</p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn primary">View Swatches</a>
+          <a href="contact.html" class="btn secondary">Get Sample Swatch Book</a>
         </div>
-        <div class="hero-image-container">
-          <!-- 建议放入厂区或高质感面料图 -->
-          <img src="images/hero-fabrics.jpg" alt="Siyin Fabric Factory" onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('beforeend', '<div style=\'width:100%; height:420px; background:#F1F5F9; border-radius:16px; display:flex; flex-direction:column; align-items:center; justify-content:center; border:2px dashed var(--border); text-align:center; padding:20px;\'><strong style=\'color:var(--dark); margin-top:12px; font-size:20px;\'>🏭 Siyin Production Facility</strong></div>')">
-        </div>
+      </div>
+      <div>
+        <div class="step-img" style="height:380px; border-radius:12px;">📷 Place Factory Image Here</div>
       </div>
     </div>
   </section>
 
-  <!-- 2. PRODUCT CATEGORIES -->
-  <section class="section-bg">
+  <!-- 2. CUSTOMIZATION STEP GUIDE (简化版：怎么选) -->
+  <section class="bg-light">
     <div class="wrap">
       <div class="section-title">
-        <span class="tag">What We Supply</span>
-        <h2>Explore Our Material Solutions</h2>
-        <p>Whether you source bulk raw material rolls or look for professional finished activewear &amp; neoprene products, we have you covered.</p>
+        <span class="tag">Easy Customization</span>
+        <h2>How to Customize Your Materials?</h2>
+        <p>No complex jargon. Build your bespoke material in 3 simple steps.</p>
       </div>
 
-      <div class="categories-grid">
-        <a href="products.html?cat=neoprene" class="category-card">
-          <div class="category-content">
-            <h4>Neoprene Materials</h4>
-            <p>CR, SCR, SBR laminated sheets for diving wetsuits &amp; industrial protection.</p>
-            <span class="category-link">View Materials</span>
+      <div class="step-grid">
+        <div class="step-card">
+          <div class="step-img">📷 [Image: Raw Neoprene Slabs]</div>
+          <div class="step-body">
+            <span class="step-num">Step 01</span>
+            <h3>Choose Core &amp; Thickness</h3>
+            <p>Select your rubber base (SBR for bags, SCR for entry wetsuits, or premium CR for professional diving) from 1.0mm to 10mm.</p>
           </div>
-        </a>
+        </div>
 
-        <a href="products.html?cat=stretch" class="category-card">
-          <div class="category-content">
-            <h4>Stretch Fabrics</h4>
-            <p>Premium Nylon Lycra, spandex &amp; cotton-feel peach skin activewear textiles.</p>
-            <span class="category-link">View Textiles</span>
+        <div class="step-card">
+          <div class="step-img">📷 [Image: Colored Fabric Rolls]</div>
+          <div class="step-body">
+            <span class="step-num">Step 02</span>
+            <h3>Choose Fabric Lamination</h3>
+            <p>Laminate your rubber with high-stretch Lycra, durable Nylon, budget Polyester, or medical-grade hook-compatible OK cloth.</p>
           </div>
-        </a>
+        </div>
 
-        <a href="oem-services.html" class="category-card">
-          <div class="category-content">
-            <h4>Custom OEM</h4>
-            <p>Tailored laminating, professional cutting, and custom fabric engineering.</p>
-            <span class="category-link">Explore OEM</span>
+        <div class="step-card">
+          <div class="step-img">📷 [Image: Embossed/Perforated Detail]</div>
+          <div class="step-body">
+            <span class="step-num">Step 03</span>
+            <h3>Add Functional Finishes</h3>
+            <p>Optimize your material with custom surface embossing (anti-slip sharkskin), ventilation perforation holes, or custom prints.</p>
           </div>
-        </a>
-
-        <a href="products.html?cat=finished" class="category-card">
-          <div class="category-content">
-            <h4>Finished Products</h4>
-            <p>Turnkey finished supports, laptop sleeves, and custom bags.</p>
-            <span class="category-link">View Products</span>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. WHY SIYIN (无ICON大字版) -->
+  <!-- 3. OEM & ODM SERVICES (能提供什么服务) -->
   <section>
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">Our Strengths</span>
-        <h2>Why Global Brands Choose Siyin</h2>
-        <p>Over two decades of dedication to materials development, supply chain reliability, and customer success.</p>
+    <div class="wrap oem-grid">
+      <div class="oem-text">
+        <h3>One-Stop OEM &amp; ODM Services</h3>
+        <p>From custom laminated raw material sheets to fully branded, retail-ready sewn products. We operate both lamination lines and a dedicated sewing workshop to handle your finished goods production.</p>
+        <p style="font-size:14px; font-weight:600; color:var(--dark);">✔ Free Lab-Dips &amp; Prototype Development</p>
       </div>
-
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="huge-number">24</div>
-          <h3>Years of Experience</h3>
-          <p>Founded in 2002, we own deep expertise in raw neoprene processing, laminating, and sewing technologies.</p>
-        </div>
-        <div class="why-card">
-          <div class="huge-number">GRS</div>
-          <h3>Sustainable Standards</h3>
-          <p>We are GRS 4.0 (Global Recycled Standard) certified, supplying eco-conscious materials worldwide.</p>
-        </div>
-        <div class="why-card">
-          <div class="huge-number">3-7</div>
-          <h3>Days Custom Prototyping</h3>
-          <p>Fast lab-dips, thickness matching, and custom laminated sample swatches sent straight to your office.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. MATERIAL SOLUTIONS -->
-  <section class="section-bg">
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">Customization Options</span>
-        <h2>High-Performance Material Solutions</h2>
-        <p>Engineered precisely to meet your specific industry requirements and application standards.</p>
-      </div>
-
-      <div class="solutions-grid">
-        <div class="solution-item">
-          <div class="solution-info" style="width:100%;">
-            <h3>Wetsuit &amp; Diving Grade (CR)</h3>
-            <p>100% Chloroprene Rubber (CR) offering maximum flexibility, compression resistance, thermal insulation, and salt-water durability.</p>
-            <span class="solution-tag">Elasticity: 400%</span>
-            <span class="solution-tag">Eco-Friendly</span>
-          </div>
-        </div>
-        <div class="solution-item">
-          <div class="solution-info" style="width:100%;">
-            <h3>Anti-Slip &amp; Embossed Neoprene</h3>
-            <p>Sharkskin, Diamond, or Cell embossed surfaces to prevent slipping. Ideal for medical braces and handle grip wraps.</p>
-            <span class="solution-tag">High Friction</span>
-            <span class="solution-tag">Custom Textures</span>
-          </div>
-        </div>
+      <div>
+        <table class="oem-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Minimum Order</th>
+              <th>Avg. Lead Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Laminated Sheets</td>
+              <td>10 Sheets</td>
+              <td>7 - 10 Days</td>
+            </tr>
+            <tr>
+              <td>Custom Textiles (Dyed)</td>
+              <td>500 Yards</td>
+              <td>12 - 15 Days</td>
+            </tr>
+            <tr>
+              <td>Sewn Supports &amp; Sleeves</td>
+              <td>500 Pcs</td>
+              <td>20 - 25 Days</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <!-- 5. MANUFACTURING PROCESS -->
-  <section>
+  <!-- 4. FACTORY TOUR -->
+  <section class="bg-light">
     <div class="wrap">
       <div class="section-title">
-        <span class="tag">Step-by-Step Excellence</span>
-        <h2>Our Manufacturing Process</h2>
-        <p>Transparency is our commitment. Here is how we build high-quality materials from scratch to ship.</p>
-      </div>
-
-      <div class="process-timeline">
-        <div class="process-step">
-          <div class="step-num">Step 01</div>
-          <h4>Rubber Splitting</h4>
-          <p>Splitting large SBR/CR blocks into exact target thickness sheets (1.0mm to 20mm).</p>
-        </div>
-        <div class="process-step">
-          <div class="step-num">Step 02</div>
-          <h4>Fabric Lamination</h4>
-          <p>Applying custom functional fabrics to rubber using eco-friendly pur hot-melt glues.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-num">Step 03</div>
-          <h4>Custom Coating</h4>
-          <p>Adding embossing, anti-slip finishes, or perforated holes as per order requirement.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-num">Step 04</div>
-          <h4>Strict Inspection</h4>
-          <p>Rigorous quality checks for elasticity, thickness tolerance, and lamination strength.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. OEM & ODM CAPABILITY -->
-  <section class="section-bg">
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">Your Private Label Partner</span>
-        <h2>Full Service OEM &amp; ODM Capabilities</h2>
-        <p>Beyond fabric raw materials, we run a state-of-the-art sewing division to deliver complete, branded finished goods.</p>
-      </div>
-
-      <div class="oem-layout">
-        <div class="oem-text">
-          <h3>Turnkey OEM Manufacturing</h3>
-          <p>We work as your background factory. Send us your designs or tech packs, and we'll handle materials sourcing, cutting, sewing, branding, and packaging.</p>
-          <ul class="oem-list">
-            <li>Custom Embossed Logo &amp; Printing</li>
-            <li>Custom Retail-Ready Hangtags &amp; Boxes</li>
-            <li>Full Product Prototype Design assistance</li>
-          </ul>
-        </div>
-        <div>
-          <table class="oem-table">
-            <thead>
-              <tr>
-                <th>Service Name</th>
-                <th>Standard MoQ</th>
-                <th>Typical Lead Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Custom Lamination Sheets</td>
-                <td>100 Sheets</td>
-                <td>10-12 Days</td>
-              </tr>
-              <tr>
-                <td>Sports Braces &amp; Supports</td>
-                <td>500 Pcs</td>
-                <td>20-25 Days</td>
-              </tr>
-              <tr>
-                <td>Branded Bags &amp; Sleeves</td>
-                <td>1,000 Pcs</td>
-                <td>25-30 Days</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. FEATURED FABRICS -->
-  <section>
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">Highly Recommended</span>
-        <h2>Featured Materials</h2>
-        <p>Our top-performing swatches favored by international functional sports and wellness brands.</p>
-      </div>
-
-      <div class="grid-container">
-        <div class="card">
-          <div class="card-img" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%)">
-            <span>🧵 CR Sheet with Lycra</span>
-          </div>
-          <div class="card-body">
-            <span class="swatch-code">N01</span>
-            <h3 class="card-title">CR Sheet with Super Stretch Lycra Lamination</h3>
-            <div class="card-meta">
-              <div class="meta-row">
-                <span>Base:</span>
-                <span>Premium CR 2.0mm</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img" style="background: linear-gradient(135deg, #0f172a 0%, #334155 100%)">
-            <span>🧵 Eco Neoprene</span>
-          </div>
-          <div class="card-body">
-            <span class="swatch-code">N04</span>
-            <h3 class="card-title">Eco-Friendly Recycled Polyester Neoprene GRS 4.0</h3>
-            <div class="card-meta">
-              <div class="meta-row">
-                <span>Base:</span>
-                <span>SBR Rubber 1.5mm</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img" style="background: linear-gradient(135deg, #064e3b 0%, #022c22 100%)">
-            <span>🧵 Nylon Lycra</span>
-          </div>
-          <div class="card-body">
-            <span class="swatch-code">Y01</span>
-            <h3 class="card-title">High-Gauge Recycled Nylon Lycra GRS 4.0</h3>
-            <div class="card-meta">
-              <div class="meta-row">
-                <span>Base:</span>
-                <span>Nylon Spandex</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img" style="background: linear-gradient(135deg, #022c22 0%, #115e59 100%)">
-            <span>🧵 Peach Skin</span>
-          </div>
-          <div class="card-body">
-            <span class="swatch-code">Y02</span>
-            <h3 class="card-title">Cotton-Feel Double-Brushed Peach Skin Fabric</h3>
-            <div class="card-meta">
-              <div class="meta-row">
-                <span>Base:</span>
-                <span>Poly Spandex</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align: center;">
-        <a href="products.html" class="btn primary">View Full Catalog →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. QUALITY CONTROL & TESTING -->
-  <section class="section-bg">
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">No Compromise on Quality</span>
-        <h2>Strict Quality Control &amp; Testing</h2>
-        <p>How we ensure every batch shipped meets international quality and toxicity regulations.</p>
-      </div>
-
-      <div class="qc-grid">
-        <div class="qc-card">
-          <h4>Thickness Uniformity Test</h4>
-          <p>Using precision laser/digital caliper sensors across sheets to ensure zero deviation over your custom specifications.</p>
-        </div>
-        <div class="qc-card">
-          <h4>Peel-Strength &amp; Adhesion</h4>
-          <p>We test laminated fabrics through 100+ simulated heavy washes to verify fabric doesn't bubble or separate from rubber.</p>
-        </div>
-        <div class="qc-card">
-          <h4>Eco-Toxicity Screening</h4>
-          <p>Ensuring neoprene chemical compounds pass REACH, RoHS regulations, and eco-friendly standards for direct-to-skin contact.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. FACTORY GALLERY -->
-  <section>
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">Inside Siyin Factory</span>
+        <span class="tag">Production Capability</span>
         <h2>Our Manufacturing Facility</h2>
-        <p>Take a virtual tour through our 8,000㎡ modern factory in Dongguan City.</p>
+        <p>A glimpse into our 8,000㎡ plant in Dongguan City, equipped with top-tier splitting and laminating lines.</p>
       </div>
-
       <div class="gallery-grid">
-        <div class="gallery-item">
-          <!-- 这里放你真实的生产车间图 -->
-          <div class="gallery-label">Lamination Area</div>
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-label">Splitting Workshop</div>
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-label">Warehouse Stock</div>
-        </div>
+        <div class="gallery-item"><div class="gallery-label">Splitting &amp; Slicing</div></div>
+        <div class="gallery-item"><div class="gallery-label">Lamination Lines</div></div>
+        <div class="gallery-item"><div class="gallery-label">Sewing &amp; QC Workshop</div></div>
       </div>
     </div>
   </section>
 
-  <!-- 10. FAQ (10 问答大模块) -->
-  <section class="section-bg">
-    <div class="wrap">
-      <div class="section-title">
-        <span class="tag">Support</span>
-        <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know about starting an order with us.</p>
-      </div>
-
-      <div class="faq-layout">
-        <div class="faq-item">
-          <h4>What is your minimum order quantity (MOQ)?</h4>
-          <p>For in-stock base neoprene sheets, the MOQ is just 10 sheets. For custom colored lamination or dyed stretch textiles, the MOQ is 500 meters per custom color.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Do you provide custom eco-friendly (GRS) fabrics?</h4>
-          <p>Yes. Siyin is officially GRS (Global Recycled Standard) certified. We offer recycled polyester/nylon fabric贴合 options and can provide TC transaction certificates for your bulk customs clearance.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11. CONTACT CTA -->
-  <section class="cta-section">
-    <div class="wrap">
-      <div class="cta-content">
-        <h2>Ready to Start Your Custom Project?</h2>
-        <p>Get in touch with our material engineers today to discuss your density, lamination, and sizing requirements.</p>
-        <a href="contact.html" class="btn primary" style="background: var(--primary); border: none;">Get Free Swatch Book</a>
-      </div>
+  <!-- 5. CONTACT CTA -->
+  <section class="cta">
+    <div class="wrap cta-content">
+      <h2>Get a Free Swatch Book</h2>
+      <p>Want to feel the quality yourself? Let us know your application and we'll ship a tailored sample catalog to you.</p>
+      <a href="contact.html" class="btn primary" style="background: var(--primary);">Inquire Free Samples</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="wrap footer-grid">
-      <div class="footer-col">
-        <div class="footer-logo">Siyin<span>.</span></div>
-        <p style="font-size: 14px; color: rgba(255,255,255,0.6); max-width: 240px;">Prime factory source for premium neoprene sheets &amp; high-performance activewear fabrics since 2002.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Materials</h5>
-        <a href="products.html?cat=neoprene">Neoprene Sheets</a>
-        <a href="products.html?cat=stretch">Stretch Fabrics</a>
-        <a href="products.html?cat=finished">Finished Goods</a>
-      </div>
-      <div class="footer-col">
-        <h5>Solutions</h5>
-        <a href="oem-services.html">OEM &amp; Sewing Services</a>
-        <a href="oem-services.html?service=lamination">Lamination Services</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contact Us</h5>
-        <a href="mailto:info@siyinfabric.com">info@siyinfabric.com</a>
-        <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 10px;">Dongguan City, Guangdong, China</p>
-      </div>
+      <div class="logo" style="color: #fff;">Siyin<span>.</span></div>
+      <div class="footer-text">© 2026 Siyin Fabric. All Rights Reserved.</div>
     </div>
   </footer>
 
