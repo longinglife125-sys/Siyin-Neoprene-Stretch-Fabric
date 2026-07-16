@@ -108,7 +108,7 @@
       transform: rotate(180deg);
     }
 
-    /* 2026极简多列大下拉菜单 (Mega Menu) */
+    /* 2026极简多列大下拉菜单 */
     .dropdown-menu {
       position: absolute;
       top: 100%;
@@ -180,12 +180,11 @@
     }
 
     /* ==========================================================================
-       HERO BANNER (左文右图)
+       HERO BANNER
        ========================================================================== */
     .hero {
-      padding: 90px 0;
+      padding: 90px 0 60px;
       background: #ffffff;
-      border-bottom: 1px solid var(--border);
     }
 
     .hero-grid {
@@ -278,7 +277,6 @@
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
     }
 
-    /* 浮动实力勋章 */
     .badge-float {
       position: absolute;
       bottom: -15px;
@@ -304,7 +302,6 @@
       font-weight: 600;
     }
 
-    /* 简短信任背书栏 */
     .trust-footer {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -327,11 +324,119 @@
     }
 
     /* ==========================================================================
+       ★ NEW: CATEGORIES BY APPLICATION (按成品应用分类模块 - 代替平铺产品)
+       ========================================================================== */
+    .categories-section {
+      padding: 80px 0;
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .category-card {
+      position: relative;
+      height: 380px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 默认卡片虚线边框占位样式（防止无图时穿帮） */
+    .category-card.placeholder {
+      background: #f1f5f9;
+      border: 2px dashed var(--border);
+    }
+
+    /* 背景暗化遮罩，确保文字易读 */
+    .category-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 60%, rgba(15, 23, 42, 0) 100%);
+      z-index: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    .category-card:hover::before {
+      background: linear-gradient(to top, rgba(5, 150, 105, 0.95) 0%, rgba(15, 23, 42, 0.3) 100%);
+    }
+
+    .category-card img {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      transition: transform 0.5s ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .category-content {
+      position: relative;
+      z-index: 2;
+      color: #ffffff;
+    }
+
+    .category-content h4 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .category-content p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .category-link {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      background: rgba(255, 255, 255, 0.95);
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+
+    .category-card:hover .category-link {
+      background: #ffffff;
+      color: var(--dark);
+      padding-right: 18px;
+    }
+
+    /* ==========================================================================
        SWATCH LIBRARY (检索器区域，保留原系统逻辑)
        ========================================================================== */
     .swatch-section {
       padding: 80px 0;
       background: var(--bg-light);
+      border-top: 1px solid var(--border);
     }
 
     .section-title {
@@ -424,12 +529,6 @@
       position: relative;
     }
 
-    .card-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
     .tag-category {
       position: absolute;
       top: 12px;
@@ -495,7 +594,7 @@
 <body>
 
   <!-- ==========================================================================
-       HEADER (导航大升级：按买家最自然的检索路径分类)
+       HEADER (导航大升级)
        ========================================================================== */ -->
   <header>
     <div class="wrap header-container">
@@ -504,12 +603,11 @@
       <nav>
         <a href="index.html" class="nav-item">Home</a>
         
-        <!-- Products 下拉菜单升级版：三列排开，让客户一眼秒懂 -->
+        <!-- Products 下拉菜单升级版 -->
         <div class="nav-item">
           Products <i>▼</i>
           <div class="dropdown-menu">
             
-            <!-- Column 1: 按用途/材质 (Neoprene Raw Material & Lamination) -->
             <div class="dropdown-group">
               <h5>Neoprene Materials</h5>
               <a href="neoprene-laminated-fabric.html">All Neoprene Sheets</a>
@@ -520,7 +618,6 @@
               <a href="neoprene-laminated-fabric.html?type=Eco">GRS 4.0 Eco-Friendly Rubber</a>
             </div>
 
-            <!-- Column 2: 运动针织工艺 (Activewear & Performance Textiles) -->
             <div class="dropdown-group">
               <h5>Stretch Fabrics</h5>
               <a href="stretch-fabric.html">All Activewear Fabrics</a>
@@ -531,7 +628,6 @@
               <a href="stretch-fabric.html?type=Velcro">Hook-Loop Compatible (OK Cloth)</a>
             </div>
 
-            <!-- Column 3: 成品应用一览 (OEM / Finished Product Applications) -->
             <div class="dropdown-group">
               <h5>OEM/ODM Solutions</h5>
               <a href="oem-odm.html">All Finished Products</a>
@@ -557,13 +653,12 @@
   </header>
 
   <!-- ==========================================================================
-       HERO BANNER (极致精炼文案 + 右侧高清面料大图)
+       HERO BANNER (极致精炼文案)
        ========================================================================== */ -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
         
-        <!-- 左侧：精炼、突出实力的买家文案 -->
         <div class="hero-text">
           <span class="label-tag">Dongguan Direct Mill Since 2002</span>
           <h1>Your Reliable Partner for Custom Neoprene &amp; Stretch Fabrics</h1>
@@ -576,7 +671,6 @@
             <a href="contact.html" class="btn secondary">Get Free Swatch Book</a>
           </div>
           
-          <!-- 实力背书 (原参数表大瘦身后保留的关键商业参数) -->
           <div class="trust-footer">
             <div class="trust-item">
               <strong>500m / Color</strong>
@@ -593,11 +687,9 @@
           </div>
         </div>
         
-        <!-- 右侧：高清工厂面料图 (极简、通透、呼吸感) -->
         <div class="hero-image-container">
           <img src="images/hero-fabrics.jpg" alt="Siyin Fabric Manufacturing" onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('beforeend', '<div style=\'width:100%; height:400px; background:#F1F5F9; border-radius:16px; display:flex; flex-direction:column; align-items:center; justify-content:center; border:2px dashed var(--border); text-align:center; padding:20px;\'><span style=\'font-size:48px; margin-bottom:12px;\'>🏭</span><strong style=\'color:var(--dark); font-size:16px;\'>[Factory / Fabric Image Place]</strong><p style=\'font-size:13px; color:var(--ink-soft); max-width:280px; margin-top:8px;\'>建议在此处放一张你们“厂区、高弹面料卷堆放”或者“复合机精细操作”的高清实拍照片，最能体现源头厂硬实力！</p></div>')">
           
-          <!-- 悬浮的小数据卡片 (提升信任感) -->
           <div class="badge-float">
             <span class="num">8,000+ ㎡</span>
             <span class="desc">Modern Production Facility</span>
@@ -605,6 +697,57 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ★ NEW SECTION: EXPLORE BY APPLICATIONS (应用分类：像成品站一样一目了然)
+       ========================================================================== */ -->
+  <section class="categories-section">
+    <div class="wrap">
+      
+      <div class="section-title">
+        <h2>Explore Our Materials by Applications</h2>
+        <p>Whether you're sourcing premium raw rolls or customized finished products, find your solutions here.</p>
+      </div>
+
+      <div class="categories-grid">
+        
+        <!-- Category 1: Neoprene Sheets -->
+        <a href="neoprene-laminated-fabric.html" class="category-card">
+          <!-- 建议放入：一张特写的、高质感多色叠加Neoprene橡胶皮料卡片特写图 -->
+          <img src="images/cat-neoprene.jpg" alt="Neoprene Lamination" onerror="this.style.display='none';">
+          <div class="category-content">
+            <h4>Neoprene Laminated Sheets</h4>
+            <p>Premium CR, SCR, SBR sheets laminated with Lycra, Nylon or OK cloth for medical supports, wetsuits and tech sleeves.</p>
+            <span class="category-link">View Materials</span>
+          </div>
+        </a>
+
+        <!-- Category 2: Stretch Performance Fabrics -->
+        <a href="stretch-fabric.html" class="category-card">
+          <!-- 建议放入：一张瑜伽、高弹拉伸或功能性针织面料微距质感图 -->
+          <img src="images/cat-stretch.jpg" alt="Activewear Stretch Fabric" onerror="this.style.display='none';">
+          <div class="category-content">
+            <h4>Activewear &amp; Gym Fabrics</h4>
+            <p>High-gauge Nylon Lycra, moisture-wicking interlock, and double-brushed peach skin fabrics for athletic clothing.</p>
+            <span class="category-link">View Textiles</span>
+          </div>
+        </a>
+
+        <!-- Category 3: Finished OEM Solutions -->
+        <a href="oem-odm.html" class="category-card">
+          <!-- 建议放入：一张精美的潜水料托特包/电脑套/运动护膝的高级静物合集图 -->
+          <img src="images/cat-oem.jpg" alt="OEM Finished Products" onerror="this.style.display='none';">
+          <div class="category-content">
+            <h4>OEM Finished Products</h4>
+            <p>Turnkey manufacturing solutions from custom design and precision cutting to professional sewing of neoprene goods.</p>
+            <span class="category-link">Explore OEM</span>
+          </div>
+        </a>
+
+      </div>
+
     </div>
   </section>
 
@@ -657,10 +800,9 @@
   </section>
 
   <!-- ==========================================================================
-       TEXTILE DATABASE & RUNTIME SCRIPT (核心业务数据引擎)
+       TEXTILE DATABASE & RUNTIME SCRIPT
        ========================================================================== */ -->
   <script>
-    // 39 款兼顾“全覆盖”与“极速定制”的核心产品库
     const swatchDatabase = [
       // NEOPRENE: 25 items
       { code: "N01", title: "CR Sheet with Super Stretch Lycra Lamination", category: "neoprene", function: "Waterproof, High Stretch, GRS", base: "Premium CR 2.0mm", weight: "N/A", key_feat: "Premium diving suits, high-end sportswear", img: "n01" },
@@ -706,7 +848,6 @@
       { code: "Y14", title: "Premium GRS Recycled Poly Interlock", category: "stretch", function: "GRS, Eco-Friendly", base: "82% Recycled Polyester, 18% Spandex", weight: "220 GSM", key_feat: "Eco-friendly sports leggings, sustainable activewear", img: "y14" }
     ];
 
-    // 初始化渲染
     const grid = document.getElementById("swatch-grid");
     const searchInput = document.getElementById("search-input");
     const filterCategory = document.getElementById("filter-category");
@@ -724,7 +865,6 @@
       }
 
       data.forEach(item => {
-        // 使用高保真色卡占位，模拟精美的微距面料质感图
         const cardImg = `<div class="card-img">
           <div style="width: 100%; height: 100%; background: linear-gradient(135deg, ${item.category === 'neoprene' ? '#334155 0%, #1e293b 100%' : '#022c22 0%, #064e3b 100%'}); opacity: 0.95; display: flex; align-items: center; justify-content: center;">
             <div style="text-align: center; color: rgba(255,255,255,0.85); padding: 20px;">
@@ -761,7 +901,6 @@
       });
     }
 
-    // 过滤检索算法逻辑
     function filterSwatches() {
       const textValue = searchInput.value.toLowerCase().trim();
       const catValue = filterCategory.value;
@@ -786,12 +925,10 @@
       renderSwatches(filtered);
     }
 
-    // 注册过滤器监听
     searchInput.addEventListener("input", filterSwatches);
     filterCategory.addEventListener("change", filterSwatches);
     filterFunction.addEventListener("change", filterSwatches);
 
-    // 首屏加载展示
     renderSwatches(swatchDatabase);
   </script>
 </body>
