@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 🎯 About 页面专属 SEO 标题 -->
+  <title>About Siyin | Certified Neoprene &amp; Sportswear Factory</title>
+  
+  <!-- 🎯 About 页面专属 SEO 描述：突显工厂面积、研发实力与国际证书 -->
+  <meta name="description" content="Discover Dongguan Siyin Sports Goods Co., Ltd. A certified manufacturer with premium neoprene lamination lines, advanced stretch fabric weaving, and GRS certification.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       🎨 BRAND IDENTITY (全站统一主视觉)
+       ========================================== */
+    :root {
+      --primary: #059669;          /* 活力翡翠绿 */
+      --primary-hover: #047857;
+      --dark: #111111;             /* 深石墨黑 */
+      --dark-soft: #374151;
+      --ink-soft: #6B7280;
+      --light-bg: #F9FAFB;
+      --border: #E5E7EB;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================
+       ⚙️ BASE SYSTEM RESET
+       ========================================== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-soft);
+      background-color: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    ul, ol { list-style: none; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 14.5px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+    }
+    .btn.primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+    .label-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      background: rgba(5, 150, 105, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================
+       🧭 HEADER (全站统一导航栏)
+       ========================================== */
+    header.site {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+    header.site .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    nav.main {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    nav.main a {
+      font-weight: 500;
+      font-size: 14.5px;
+      color: var(--dark-soft);
+    }
+    nav.main a:hover, nav.main a.active {
+      color: var(--primary);
+    }
+    .nav-cta {
+      background: var(--dark);
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .nav-cta:hover { background: var(--primary); }
+
+    /* 下拉菜单 */
+    .dropdown { position: relative; cursor: pointer; }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%; left: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 0;
+      min-width: 240px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      opacity: 0; visibility: hidden;
+      transform: translateY(10px);
+      transition: var(--transition);
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1; visibility: visible; transform: translateY(0);
+    }
+    .dropdown-menu a {
+      display: block; padding: 10px 20px; font-size: 14px; color: var(--dark-soft);
+    }
+    .dropdown-menu a:hover { background: var(--light-bg); color: var(--primary); }
+
+    /* ==========================================
+       🏔️ PAGE HERO (关于我们头部)
+       ========================================== */
+    .page-hero {
+      background: var(--light-bg);
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .page-hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .page-hero p {
+      font-size: 17px;
+      color: var(--dark-soft);
+      margin-bottom: 24px;
+    }
+
+    /* ==========================================
+       📊 NUMBERS (数据硬核背书，击中买家关注点)
+       ========================================== */
+    .section-padding { padding: 80px 0; }
+    .num-section { background: var(--dark); color: #fff; }
+    .num-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .num-item h3 {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .num-item p {
+      font-size: 14px;
+      color: #9CA3AF;
+    }
+
+    /* ==========================================
+       🏢 FACTORY STRENGTH (工厂车间展示)
+       ========================================== */
+    .fac-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .fac-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .fac-desc {
+      font-size: 15.5px;
+      color: var(--ink-soft);
+      margin-bottom: 24px;
+    }
+    .fac-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .fac-hl-item {
+      border-left: 3px solid var(--primary);
+      padding-left: 16px;
+    }
+    .fac-hl-item h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .fac-hl-item p {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+    }
+
+    /* ==========================================
+       📜 CERTIFICATES (资质与证书)
+       ========================================== */
+    .cert-section { background: var(--light-bg); }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .cert-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .cert-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(5, 150, 105, 0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 24px;
+      margin: 0 auto 16px;
+    }
+    .cert-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .cert-card p {
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    /* ==========================================
+       📬 QUICK INQUIRY MODAL (询盘弹窗)
+       ========================================== */
+    .qr-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(11, 11, 11, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0; pointer-events: none;
+      transition: var(--transition);
+    }
+    .qr-overlay.open { opacity: 1; pointer-events: auto; }
+    .qr-modal {
+      background: #fff; border-radius: 16px; width: 100%; max-width: 540px; padding: 36px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); position: relative;
+      transform: scale(0.95); transition: var(--transition);
+    }
+    .qr-overlay.open .qr-modal { transform: scale(1); }
+    .qr-close {
+      position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--ink-soft);
+    }
+    .field { margin-bottom: 18px; }
+    .field label { display: block; font-weight: 600; font-size: 13.5px; color: var(--dark); margin-bottom: 6px; }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 14px;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--primary); }
+
+    /* ==========================================
+       👣 FOOTER (全站统一页脚)
+       ========================================== */
+    footer { background: var(--dark); color: #9CA3AF; padding: 64px 0 32px; font-size: 14px; }
+    .foot-grid {
+      display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 48px; margin-bottom: 48px;
+    }
+    .foot-col h5 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 20px; }
+    .foot-col p { margin-bottom: 16px; }
+    .foot-col a { display: block; color: #9CA3AF; margin-bottom: 12px; }
+    .foot-col a:hover { color: var(--primary); }
+    .foot-bottom {
+      border-top: 1px solid #1F2937; padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px;
+    }
+
+    .menu-toggle { display: none; }
+    @media(max-width: 768px) {
+      .page-hero-grid, .num-grid, .fac-grid, .cert-grid { grid-template-columns: 1fr; }
+      nav.main { display: none; }
+      .menu-toggle { display: block; background: none; border: none; font-size: 24px; cursor: pointer; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🧭 导航栏 -->
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>Siyin</a>
+    <button class="menu-toggle" onclick="alert('Menu')" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <span class="dropdown">
+        <a href="neoprene-laminated-fabric.html">Products</a>
+        <div class="dropdown-menu">
+          <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+          <a href="stretch-fabric.html">Stretch Fabric</a>
+        </div>
+      </span>
+      <a href="oem-odm.html">OEM &amp; ODM</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="nav-cta" onclick="openQuickReply();return false;">Get a Quick Reply</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 🏔️ 页面头部 -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-hero-grid">
+      <div>
+        <span class="label-tag">Dongguan Siyin Sports Goods Co., Ltd.</span>
+        <h1>A True, Vertical Textile &amp; Apparel Factory</h1>
+        <p>Located in Dongguan, the heart of China’s premium manufacturing zone. We specialize in advanced neoprene lamination, custom high-elastic fabric engineering, and precision activewear apparel stitching. Our mission is to provide global brands with certified, reliable material &amp; garment solutions.</p>
+        <button class="btn primary" onclick="openQuickReply()">Schedule a Factory Video Tour</button>
+      </div>
+      <div style="background:#e5e7eb; height:240px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:var(--ink-soft);">
+        [Factory Main Entrance Photo]
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📊 数据硬背书 -->
+<section class="section-padding num-section">
+  <div class="wrap">
+    <div class="num-grid">
+      <div class="num-item">
+        <h3>10+</h3>
+        <p>Years Industry Experience</p>
+      </div>
+      <div class="num-item">
+        <h3>5,000+</h3>
+        <p>Sqm Modern Factory Area</p>
+      </div>
+      <div class="num-item">
+        <h3>3-7</h3>
+        <p>Days Quick Sample Delivery</p>
+      </div>
+      <div class="num-item">
+        <h3>100%</h3>
+        <p>Internal Quality Control</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🏢 生产车间硬核展示 -->
+<section class="section-padding">
+  <div class="wrap">
+    <div class="fac-grid">
+      <div style="background:#e5e7eb; height:380px; border-radius:16px; display:flex; align-items:center; justify-content:center; color:var(--ink-soft);">
+        [Neoprene Lamination Line &amp; Sewing Workshop Image]
+      </div>
+      <div>
+        <span class="label-tag">Production Lines</span>
+        <h2 class="fac-title">How We Guarantee Consistent Quality</h2>
+        <p class="fac-desc">Unlike traditional trading agents, Siyin owns and operates its lamination machines and garment sewing facilities. By keeping the manufacturing process fully under our roof, we control raw materials, production cycles, and costs directly.</p>
+        
+        <div class="fac-highlights">
+          <div class="fac-hl-item">
+            <h4>Lamination Workshop</h4>
+            <p>Precise PUR hot melt and water-based eco-lamination lines for Neoprene, TPU, and functional fabrics.</p>
+          </div>
+          <div class="fac-hl-item">
+            <h4>Sewing Workshop</h4>
+            <p>Equipped with computerized layout cutting and flat-lock 4-needle 6-thread machinery lines.</p>
+          </div>
+          <div class="fac-hl-item">
+            <h4>Material Labs</h4>
+            <p>Equipped with internal testers for fabric GSM, tearing strength, colorfastness, and hydrostatic head.</p>
+          </div>
+          <div class="fac-hl-item">
+            <h4>Sustainability Commitment</h4>
+            <p>Active GRS 4.0 certification. Offering recycled polyester &amp; bio-based neoprene options.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📜 资质与证书 -->
+<section class="section-padding cert-section">
+  <div class="wrap">
+    <div style="text-align:center; max-width:680px; margin:0 auto 48px;">
+      <span class="label-tag">Trust &amp; Compliance</span>
+      <h2 style="font-size:32px; color:var(--dark); margin-bottom:12px;">Global Standards, Certified Quality</h2>
+      <p>We comply with international standards to ensure smooth importing and custom clearance for your brand.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">✓</div>
+        <h4>ISO 9001:2015</h4>
+        <p>Certified quality management system covering every manufacturing process.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">♻</div>
+        <h4>GRS 4.0 (Global Recycled Standard)</h4>
+        <p>Verified supply chain trace-back for recycled fabrics and eco-friendly products.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">☉</div>
+        <h4>OEKO-TEX Standard 100</h4>
+        <p>Chemical safety and skin-friendly properties on all base raw materials.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">★</div>
+        <h4>SGS Tested</h4>
+        <p>Approved waterproof ratings, thermal limits, and durability standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 👣 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h5>Siyin Fabric</h5>
+        <p>Dongguan Siyin Sports Goods Co., Ltd. — Expert in neoprene lamination, high-performance stretch textiles, and premium OEM apparel production.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Products &amp; Service</h5>
+        <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+        <a href="stretch-fabric.html">Stretch Fabrics (Yoga)</a>
+        <a href="oem-odm.html">OEM Activewear Clothing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About Siyin</a>
+        <a href="blog.html">Technical Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <p>Dongguan, Guangdong, China</p>
+        <a href="mailto:sales@siyinfabric.com">sales@siyinfabric.com</a>
+        <a href="https://wa.me/8618307510254">WhatsApp: +86 183 0751 0254</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Dongguan Siyin Sports Goods Co., Ltd. All Rights Reserved.</span>
+      <span>ISO 9001:2015 &middot; GRS 4.0 Certified Factory</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 📬 专业询盘弹窗 -->
+<div class="qr-overlay" id="qrOverlay" onclick="if(event.target===this)closeQuickReply();">
+  <div class="qr-modal">
+    <button class="qr-close" onclick="closeQuickReply()">&times;</button>
+    <h3 id="qrTitle">Schedule a Direct Video Tour</h3>
+    <p style="font-size:14px;color:var(--ink-soft);margin:8px 0 20px;">We believe in ultimate transparency. Meet our managers and tour our clean factory floor via a scheduled Zoom/WhatsApp video call.</p>
+    <div class="field"><label>Your Name</label><input type="text" placeholder="John Doe"></div>
+    <div class="field"><label>Business Email / WhatsApp</label><input type="text" placeholder="john@brand.com"></div>
+    <div class="field"><label>Preferred App</label>
+      <select>
+        <option>WhatsApp Video Call</option>
+        <option>Zoom Meeting</option>
+        <option>WeChat</option>
+      </select>
+    </div>
+    <div class="field"><label>What do you want to inspect first?</label>
+      <textarea placeholder="e.g. I would like to see the neoprene lamination process and also discuss customization MOQ limits with your manager."></textarea>
+    </div>
+    <button type="button" class="btn primary" style="width:100%;" onclick="alert('Video Tour request sent successfully!')">Schedule Tour</button>
+  </div>
+</div>
+
+<script>
+  function openQuickReply(){document.getElementById('qrOverlay').classList.add('open');}
+  function closeQuickReply(){document.getElementById('qrOverlay').classList.remove('open');}
+</script>
+</body>
+</html>
