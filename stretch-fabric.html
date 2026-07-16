@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 🎯 高弹面料页面专属 SEO 标题：死磕高频运动与瑜伽面料搜索词 -->
+  <title>Wholesale Yoga &amp; Activewear Stretch Fabric | Siyin</title>
+  
+  <!-- 🎯 高弹面料页面专属 SEO 描述：150字符，命中锦氨、四面弹、吸湿排汗等买家核心关注的参数 -->
+  <meta name="description" content="Source high-performance 4-way stretch fabrics optimized for yoga and activewear. Wholesale nylon-spandex blends with moisture-wicking &amp; premium compression.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       🎨 BRAND IDENTITY (保持与首页、潜水料页视觉高度一致)
+       ========================================== */
+    :root {
+      --primary: #059669;          /* 活力翡翠绿 */
+      --primary-hover: #047857;
+      --dark: #111111;             /* 深石墨黑 */
+      --dark-soft: #374151;
+      --ink-soft: #6B7280;
+      --light-bg: #F9FAFB;
+      --border: #E5E7EB;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================
+       ⚙️ BASE SYSTEM RESET
+       ========================================== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-soft);
+      background-color: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    ul, ol { list-style: none; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 14.5px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+    }
+    .btn.primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--dark);
+      border: 1.5px solid var(--border);
+    }
+    .btn.ghost:hover {
+      background: var(--light-bg);
+      border-color: var(--dark);
+    }
+    .label-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      background: rgba(5, 150, 105, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================
+       🧭 HEADER (导航栏，保持全站统一)
+       ========================================== */
+    header.site {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+    header.site .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    nav.main {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    nav.main a {
+      font-weight: 500;
+      font-size: 14.5px;
+      color: var(--dark-soft);
+    }
+    nav.main a:hover, nav.main a.active {
+      color: var(--primary);
+    }
+    .nav-cta {
+      background: var(--dark);
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .nav-cta:hover { background: var(--primary); }
+
+    /* 下拉菜单 */
+    .dropdown { position: relative; cursor: pointer; }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%; left: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 0;
+      min-width: 240px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      opacity: 0; visibility: hidden;
+      transform: translateY(10px);
+      transition: var(--transition);
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1; visibility: visible; transform: translateY(0);
+    }
+    .dropdown-menu a {
+      display: block; padding: 10px 20px; font-size: 14px; color: var(--dark-soft);
+    }
+    .dropdown-menu a:hover { background: var(--light-bg); color: var(--primary); }
+
+    /* ==========================================
+       🏔️ PAGE HERO (子页头部大图区)
+       ========================================== */
+    .page-hero {
+      background: var(--light-bg);
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .page-hero h1 {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .page-hero p {
+      font-size: 16px;
+      color: var(--dark-soft);
+      margin-bottom: 24px;
+    }
+
+    /* ==========================================
+       🔍 PRODUCT FILTER / GRID (产品展示区)
+       ========================================== */
+    .section-padding { padding: 80px 0; }
+    .product-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+    }
+    
+    /* 侧边参数筛选区（突显B端成衣面料大厂实力） */
+    .sidebar {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      height: fit-content;
+      background: #fff;
+    }
+    .sidebar-widget { margin-bottom: 32px; }
+    .sidebar-widget h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .filter-list li {
+      font-size: 13.5px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--dark-soft);
+    }
+
+    /* 产品卡片网格 */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .prod-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .prod-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+      border-color: var(--primary);
+    }
+    .prod-thumb {
+      height: 200px;
+      background: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      font-size: 14px;
+    }
+    .prod-info { padding: 20px; }
+    .prod-info h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .prod-info p {
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .prod-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+    .prod-moq { font-size: 12px; font-weight: 600; color: var(--primary); }
+
+    /* ==========================================
+       📊 TECHNICAL COMPARISON TABLE (技术参数对比)
+       ========================================== */
+    .table-section { background: var(--light-bg); }
+    .table-container {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+    th, td { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    th { background: #f9fafb; font-weight: 700; color: var(--dark); }
+    tr:last-child td { border-bottom: none; }
+
+    /* ==========================================
+       📬 QUICK INQUIRY MODAL (询盘弹窗)
+       ========================================== */
+    .qr-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(11, 11, 11, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0; pointer-events: none;
+      transition: var(--transition);
+    }
+    .qr-overlay.open { opacity: 1; pointer-events: auto; }
+    .qr-modal {
+      background: #fff; border-radius: 16px; width: 100%; max-width: 540px; padding: 36px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); position: relative;
+      transform: scale(0.95); transition: var(--transition);
+    }
+    .qr-overlay.open .qr-modal { transform: scale(1); }
+    .qr-close {
+      position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--ink-soft);
+    }
+    .field { margin-bottom: 18px; }
+    .field label { display: block; font-weight: 600; font-size: 13.5px; color: var(--dark); margin-bottom: 6px; }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 14px;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--primary); }
+
+    /* ==========================================
+       👣 FOOTER (页脚)
+       ========================================== */
+    footer { background: var(--dark); color: #9CA3AF; padding: 64px 0 32px; font-size: 14px; }
+    .foot-grid {
+      display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 48px; margin-bottom: 48px;
+    }
+    .foot-col h5 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 20px; }
+    .foot-col p { margin-bottom: 16px; }
+    .foot-col a { display: block; color: #9CA3AF; margin-bottom: 12px; }
+    .foot-col a:hover { color: var(--primary); }
+    .foot-bottom {
+      border-top: 1px solid #1F2937; padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px;
+    }
+
+    .menu-toggle { display: none; }
+    @media(max-width: 768px) {
+      .product-layout { grid-template-columns: 1fr; }
+      .page-hero-grid { grid-template-columns: 1fr; }
+      nav.main { display: none; }
+      .menu-toggle { display: block; background: none; border: none; font-size: 24px; cursor: pointer; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🧭 导航栏 -->
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>Siyin</a>
+    <button class="menu-toggle" onclick="alert('Menu')" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <span class="dropdown">
+        <a href="neoprene-laminated-fabric.html" class="active">Products</a>
+        <div class="dropdown-menu">
+          <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+          <a href="stretch-fabric.html">Stretch Fabric</a>
+        </div>
+      </span>
+      <a href="oem-odm.html">OEM &amp; ODM</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="nav-cta" onclick="openQuickReply();return false;">Get a Quick Reply</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 🏔️ 页面头部 -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-hero-grid">
+      <div>
+        <span class="label-tag">Athleisure &amp; Sportswear Solutions</span>
+        <h1>Premium Stretch Fabrics</h1>
+        <p>Expertly engineered Nylon-Spandex and Polyester-Spandex blends. Offering superior 4-way compression, buttery-soft hand feel, and advanced moisture management. Ideal for premium yoga wear and functional activewear.</p>
+        <button class="btn primary" onclick="openQuickReply()">Request Swatch Book</button>
+      </div>
+      <div style="background:#e5e7eb; height:220px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:var(--ink-soft);">
+        [Stretch Fabric Texture Image]
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🔍 产品与筛选 -->
+<section class="section-padding">
+  <div class="wrap">
+    <div class="product-layout">
+      
+      <!-- 侧边栏：技术指标 -->
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h4>Fiber Blends</h4>
+          <ul class="filter-list">
+            <li><span>Nylon + Spandex (Lycra)</span></li>
+            <li><span>Polyester + Spandex</span></li>
+            <li><span>Recycled GRS Polyester</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-widget">
+          <h4>Fabric Finishes</h4>
+          <ul class="filter-list">
+            <li><span>Moisture-Wicking</span></li>
+            <li><span>Anti-Bacterial</span></li>
+            <li><span>Buttery-Soft Peaching</span></li>
+            <li><span>UV Protection UPF 50+</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-widget">
+          <h4>Best For</h4>
+          <ul class="filter-list">
+            <li><span>High-Rise Yoga Leggings</span></li>
+            <li><span>Supportive Sports Bras</span></li>
+            <li><span>Compression Gym Apparel</span></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- 产品网格 -->
+      <main>
+        <div class="product-grid">
+          
+          <!-- 单品 1 -->
+          <div class="prod-card">
+            <div class="prod-thumb">[Nylon Spandex Interlock]</div>
+            <div class="prod-info">
+              <h3>Nylon Spandex Double Interlock</h3>
+              <p>Non-see-through, buttery soft feel, with premium 4-way stretch. Designed specifically for high-end yoga leggings.</p>
+              <div class="prod-meta">
+                <span class="prod-moq">MOQ: 100 kg</span>
+                <button class="btn ghost" style="padding:6px 12px; font-size:12px;" onclick="openQuickReply('Nylon Spandex Interlock')">Get Quote</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 单品 2 -->
+          <div class="prod-card">
+            <div class="prod-thumb">[Recycled GRS Polyester Spandex]</div>
+            <div class="prod-info">
+              <h3>Eco-Friendly GRS Recycled Polyester</h3>
+              <p>Sustainable performance fabric made from recycled plastic bottles. High colorfastness and moisture-wicking properties.</p>
+              <div class="prod-meta">
+                <span class="prod-moq">MOQ: 100 kg</span>
+                <button class="btn ghost" style="padding:6px 12px; font-size:12px;" onclick="openQuickReply('GRS Recycled Poly')">Get Quote</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 单品 3 -->
+          <div class="prod-card">
+            <div class="prod-thumb">[Brushed Peached Fabric]</div>
+            <div class="prod-info">
+              <h3>Double-Sided Brushed Soft Fabric</h3>
+              <p>Ultra-cozy, brushed peach-skin finish. Delivers a second-skin feel while retaining perfect thermal performance.</p>
+              <div class="prod-meta">
+                <span class="prod-moq">MOQ: 100 kg</span>
+                <button class="btn ghost" style="padding:6px 12px; font-size:12px;" onclick="openQuickReply('Brushed Soft Fabric')">Get Quote</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+</section>
+
+<!-- 📊 技术参数表 -->
+<section class="section-padding table-section">
+  <div class="wrap">
+    <div style="margin-bottom:32px;">
+      <h2 style="font-size:28px; color:var(--dark); margin-bottom:8px;">Activewear Fabric Specifications</h2>
+      <p>Compare weight, blend ratio, and features to choose the ideal fabric for your collection.</p>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Fabric Composition</th>
+            <th>Weight (GSM)</th>
+            <th>Stretch &amp; Elasticity</th>
+            <th>Key Performance</th>
+            <th>Target Application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>75% Nylon, 25% Spandex</strong></td>
+            <td>220g - 250g</td>
+            <td>Exceptional (★★★★★)</td>
+            <td>Buttery soft, non-see-through</td>
+            <td>Luxury Yoga Pants, Leggings, Sports Bras</td>
+          </tr>
+          <tr>
+            <td><strong>80% Polyester, 20% Spandex</strong></td>
+            <td>240g - 280g</td>
+            <td>High (★★★★☆)</td>
+            <td>Great durability, high compression</td>
+            <td>Gym wear, Athleisure, Training gear</td>
+          </tr>
+          <tr>
+            <td><strong>85% Recycled Poly, 15% Spandex</strong></td>
+            <td>200g - 230g</td>
+            <td>Good (★★★★☆)</td>
+            <td>GRS Certified, Eco-friendly</td>
+            <td>Sustainable sportswear, athletic tees</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 👣 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h5>Siyin Fabric</h5>
+        <p>Dongguan Siyin Sports Goods Co., Ltd. — Expert in neoprene lamination, high-performance stretch textiles, and premium OEM apparel production.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Products &amp; Service</h5>
+        <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+        <a href="stretch-fabric.html">Stretch Fabrics (Yoga)</a>
+        <a href="oem-odm.html">OEM Activewear Clothing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About Siyin</a>
+        <a href="blog.html">Technical Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <p>Dongguan, Guangdong, China</p>
+        <a href="mailto:sales@siyinfabric.com">sales@siyinfabric.com</a>
+        <a href="https://wa.me/8618307510254">WhatsApp: +86 183 0751 0254</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Dongguan Siyin Sports Goods Co., Ltd. All Rights Reserved.</span>
+      <span>ISO 9001:2015 &middot; GRS 4.0 Certified Factory</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 📬 专业询盘弹窗 -->
+<div class="qr-overlay" id="qrOverlay" onclick="if(event.target===this)closeQuickReply();">
+  <div class="qr-modal">
+    <button class="qr-close" onclick="closeQuickReply()">&times;</button>
+    <h3 id="qrTitle">Request Fabric Swatches &amp; Pricing</h3>
+    <p style="font-size:14px;color:var(--ink-soft);margin:8px 0 20px;">Provide your fabric specs. Our experts will arrange samples and a custom quote for your activewear brand within 12 hours.</p>
+    <div class="field"><label>Your Name</label><input type="text" placeholder="John Doe"></div>
+    <div class="field"><label>Business Email / WhatsApp</label><input type="text" placeholder="john@brand.com"></div>
+    <div class="field"><label>Selected Specification</label>
+      <input type="text" id="targetSpec" value="Stretch Fabric Inquiry" placeholder="e.g. Nylon Spandex 220GSM">
+    </div>
+    <div class="field"><label>Project details / Expected GSM &amp; Blend</label>
+      <textarea placeholder="e.g. Looking for 220-250GSM Nylon Spandex fabric with a buttery soft finish for high-rise leggings. Please offer pricing and sample yardage."></textarea>
+    </div>
+    <button type="button" class="btn primary" style="width:100%;" onclick="alert('Inquiry Sent successfully!')">Send Inquiry</button>
+  </div>
+</div>
+
+<script>
+  function openQuickReply(specName){
+    if(specName) {
+      document.getElementById('targetSpec').value = specName;
+    }
+    document.getElementById('qrOverlay').classList.add('open');
+  }
+  function closeQuickReply(){document.getElementById('qrOverlay').classList.remove('open');}
+</script>
+</body>
+</html>
