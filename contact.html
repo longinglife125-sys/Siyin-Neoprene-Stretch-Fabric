@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 🎯 Contact 页面专属 SEO 标题 -->
+  <title>Contact Us | Custom Neoprene &amp; Stretch Fabric Quote | Siyin</title>
+  
+  <!-- 🎯 Contact 页面专属 SEO 描述 -->
+  <meta name="description" content="Get a rapid quote within 24 hours. Contact Dongguan Siyin for custom neoprene laminated fabrics, yoga stretch materials, and professional activewear OEM services.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       🎨 BRAND IDENTITY (全站统一主视觉)
+       ========================================== */
+    :root {
+      --primary: #059669;          /* 活力翡翠绿 */
+      --primary-hover: #047857;
+      --dark: #111111;             /* 深石墨黑 */
+      --dark-soft: #374151;
+      --ink-soft: #6B7280;
+      --light-bg: #F9FAFB;
+      --border: #E5E7EB;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================
+       ⚙️ BASE SYSTEM RESET
+       ========================================== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-soft);
+      background-color: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    ul, ol { list-style: none; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 14.5px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+    }
+    .btn.primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+    .btn.whatsapp {
+      background: #25D366;
+      color: #fff;
+    }
+    .btn.whatsapp:hover {
+      background: #20BA5A;
+    }
+    .label-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      background: rgba(5, 150, 105, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================
+       🧭 HEADER (全站统一导航栏)
+       ========================================== */
+    header.site {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+    header.site .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    nav.main {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    nav.main a {
+      font-weight: 500;
+      font-size: 14.5px;
+      color: var(--dark-soft);
+    }
+    nav.main a:hover, nav.main a.active {
+      color: var(--primary);
+    }
+    .nav-cta {
+      background: var(--dark);
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .nav-cta:hover { background: var(--primary); }
+
+    /* 下拉菜单 */
+    .dropdown { position: relative; cursor: pointer; }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%; left: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 0;
+      min-width: 240px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      opacity: 0; visibility: hidden;
+      transform: translateY(10px);
+      transition: var(--transition);
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1; visibility: visible; transform: translateY(0);
+    }
+    .dropdown-menu a {
+      display: block; padding: 10px 20px; font-size: 14px; color: var(--dark-soft);
+    }
+    .dropdown-menu a:hover { background: var(--light-bg); color: var(--primary); }
+
+    /* ==========================================
+       🏔️ PAGE HERO (联系我们头部)
+       ========================================== */
+    .page-hero {
+      background: var(--light-bg);
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .page-hero p {
+      font-size: 16px;
+      color: var(--ink-soft);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================
+       📬 CONTACT & INQUIRY SPLIT GRID (左联系，右表单)
+       ========================================== */
+    .section-padding { padding: 80px 0; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+    }
+
+    /* 左侧联系卡片 */
+    .contact-info-col h2 {
+      font-size: 28px;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .contact-info-col p {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin-bottom: 32px;
+    }
+    .contact-card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .contact-item-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(5, 150, 105, 0.08);
+      color: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .contact-item-text h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .contact-item-text p, .contact-item-text a {
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+    .contact-item-text a:hover { color: var(--primary); }
+
+    /* 右侧专业询盘表单 */
+    .inquiry-form-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    }
+    .inquiry-form-card h3 {
+      font-size: 22px;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .inquiry-form-card p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin-bottom: 24px;
+    }
+    .form-group-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .field { margin-bottom: 20px; }
+    .field label {
+      display: block;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      background: #fff;
+      color: var(--dark-soft);
+      transition: var(--transition);
+    }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+    }
+    .file-upload-wrapper {
+      border: 1.5px dashed var(--border);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      background: var(--light-bg);
+      transition: var(--transition);
+    }
+    .file-upload-wrapper:hover {
+      border-color: var(--primary);
+      background: #fff;
+    }
+    .file-upload-wrapper input[type="file"] {
+      display: none;
+    }
+    .file-upload-text {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+    }
+    .file-upload-text strong {
+      color: var(--primary);
+    }
+
+    /* ==========================================
+       🗺️ INTERACTIVE MAP AREA (地图与交通引导)
+       ========================================== */
+    .map-section { background: var(--light-bg); }
+    .map-container {
+      background: #e5e7eb;
+      height: 400px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      margin-top: 32px;
+    }
+
+    /* ==========================================
+       👣 FOOTER (全站统一页脚)
+       ========================================== */
+    footer { background: var(--dark); color: #9CA3AF; padding: 64px 0 32px; font-size: 14px; }
+    .foot-grid {
+      display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 48px; margin-bottom: 48px;
+    }
+    .foot-col h5 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 20px; }
+    .foot-col p { margin-bottom: 16px; }
+    .foot-col a { display: block; color: #9CA3AF; margin-bottom: 12px; }
+    .foot-col a:hover { color: var(--primary); }
+    .foot-bottom {
+      border-top: 1px solid #1F2937; padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px;
+    }
+
+    .menu-toggle { display: none; }
+    @media(max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-group-row { grid-template-columns: 1fr; }
+      nav.main { display: none; }
+      .menu-toggle { display: block; background: none; border: none; font-size: 24px; cursor: pointer; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🧭 导航栏 -->
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>Siyin</a>
+    <button class="menu-toggle" onclick="alert('Menu')" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <span class="dropdown">
+        <a href="neoprene-laminated-fabric.html">Products</a>
+        <div class="dropdown-menu">
+          <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+          <a href="stretch-fabric.html">Stretch Fabric</a>
+        </div>
+      </span>
+      <a href="oem-odm.html">OEM &amp; ODM</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="https://wa.me/8618307510254" class="nav-cta" target="_blank">Chat on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 🏔️ 页面头部 -->
+<section class="page-hero">
+  <div class="wrap">
+    <span class="label-tag">Direct Factory Communication</span>
+    <h1>Connect with Our Specialists</h1>
+    <p>Request pricing, order premium A4 samples, or arrange custom development runs. Our technical team responds within 24 working hours.</p>
+  </div>
+</section>
+
+<!-- 📬 联系与询盘主版块 -->
+<section class="section-padding">
+  <div class="wrap">
+    <div class="contact-grid">
+      
+      <!-- 左侧：公司直连联系信息 -->
+      <div class="contact-info-col">
+        <h2>Direct Contact Options</h2>
+        <p>Skip the middleman. Reach out directly to our sales office and factory managers for project pricing, scheduling, and custom dye matching.</p>
+        
+        <div class="contact-card-list">
+          <div class="contact-item">
+            <div class="contact-item-icon">✉</div>
+            <div class="contact-item-text">
+              <h4>Sales Inquiry Mailbox</h4>
+              <p><a href="mailto:sales@siyinfabric.com">sales@siyinfabric.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">☏</div>
+            <div class="contact-item-text">
+              <h4>Instant WhatsApp Line</h4>
+              <p><a href="https://wa.me/8618307510254" target="_blank">+86 183 0751 0254</a> (Urgent request channel)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">⚲</div>
+            <div class="contact-item-text">
+              <h4>Factory Location</h4>
+              <p>No. 12, Zhenxing Road, Liaobu Town, Dongguan City, Guangdong Province, China</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">⏰</div>
+            <div class="contact-item-text">
+              <h4>Working Hours</h4>
+              <p>Monday - Saturday | 8:30 AM - 6:00 PM (GMT +8)</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid var(--border); padding-top: 32px;">
+          <h4 style="font-size:16px; margin-bottom:12px; color:var(--dark);">Need Instant Project Feasibility Feedback?</h4>
+          <a href="https://wa.me/8618307510254" class="btn whatsapp" target="_blank">⚡ Connect on WhatsApp Now</a>
+        </div>
+      </div>
+
+      <!-- 右侧：高级专业询盘表单 -->
+      <div>
+        <div class="inquiry-form-card">
+          <h3>Request a Technical Quote</h3>
+          <p>Provide specifications to receive an accurate, manufacturer-direct quotation.</p>
+          
+          <form id="quoteForm" onsubmit="handleInquirySubmit(event)">
+            <div class="form-group-row">
+              <div class="field">
+                <label>Your Name *</label>
+                <input type="text" placeholder="John Doe" required>
+              </div>
+              <div class="field">
+                <label>Business Email *</label>
+                <input type="email" placeholder="john@brand.com" required>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="field">
+                <label>WhatsApp / Phone (Optional)</label>
+                <input type="text" placeholder="e.g. +1 555-0199">
+              </div>
+              <div class="field">
+                <label>Company Name (Optional)</label>
+                <input type="text" placeholder="e.g. Premium Gym Wear Ltd">
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Target Product Group *</label>
+              <select required>
+                <option value="" disabled selected>Select products...</option>
+                <option value="neoprene_fabric">Neoprene Sheet &amp; Laminated Fabrics</option>
+                <option value="stretch_fabric">Nylon / Polyester High-Stretch Fabrics (Yoga)</option>
+                <option value="apparel_oem">Yoga Wear / Sportswear Finished Garment OEM</option>
+                <option value="other">Other Technical Textile Request</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Detailed Specifications *</label>
+              <textarea rows="5" placeholder="Include as many specs as possible (e.g. 2mm SCR Neoprene, Nylon Double-sided lamination, 200 yards, or Yoga Leggings OEM with tech sheets)." required></textarea>
+            </div>
+
+            <!-- 文件/设计稿上传组件（体现专业度） -->
+            <div class="field">
+              <label>Attach Tech Packs, Patterns or Logos (Max 20MB)</label>
+              <div class="file-upload-wrapper" onclick="document.getElementById('fileInput').click()">
+                <input type="file" id="fileInput" onchange="updateFileName(this)">
+                <div class="file-upload-text" id="uploadText">
+                  Drag &amp; drop files here, or <strong>browse files</strong>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn primary" style="width: 100%;">Submit Inquiry &amp; Request Pricing</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🗺️ 工厂定位与交通指引 -->
+<section class="section-padding map-section">
+  <div class="wrap">
+    <div style="text-align: center; max-width: 600px; margin: 0 auto 32px;">
+      <h2>Visit Our Facilities</h2>
+      <p>We are a 1-hour drive from Guangzhou Baiyun Airport (CAN) and Shenzhen Bao'an Airport (SZX). We warmly welcome physical on-site audits.</p>
+    </div>
+    
+    <!-- 实景地图/示意插图区 -->
+    <div class="map-container">
+      [Interactive Google Map Placeholder - Liaobu, Dongguan Factory Area]
+    </div>
+  </div>
+</section>
+
+<!-- 👣 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h5>Siyin Fabric</h5>
+        <p>Dongguan Siyin Sports Goods Co., Ltd. — Expert in neoprene lamination, high-performance stretch textiles, and premium OEM apparel production.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Products &amp; Service</h5>
+        <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+        <a href="stretch-fabric.html">Stretch Fabrics (Yoga)</a>
+        <a href="oem-odm.html">OEM Activewear Clothing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About Siyin</a>
+        <a href="blog.html">Technical Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <p>Dongguan, Guangdong, China</p>
+        <a href="mailto:sales@siyinfabric.com">sales@siyinfabric.com</a>
+        <a href="https://wa.me/8618307510254">WhatsApp: +86 183 0751 0254</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Dongguan Siyin Sports Goods Co., Ltd. All Rights Reserved.</span>
+      <span>ISO 9001:2015 &middot; GRS 4.0 Certified Factory</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function updateFileName(input) {
+    const filename = input.files[0] ? input.files[0].name : "Drag & drop files here, or browse files";
+    document.getElementById('uploadText').innerHTML = input.files[0] 
+      ? `Selected: <strong>${filename}</strong>` 
+      : `Drag & drop files here, or <strong>browse files</strong>`;
+  }
+
+  function handleInquirySubmit(event) {
+    event.preventDefault();
+    alert('Thank you! Your technical inquiry has been submitted successfully. Our specialists will contact you within 24 hours.');
+    document.getElementById('quoteForm').reset();
+    document.getElementById('uploadText').innerHTML = "Drag & drop files here, or <strong>browse files</strong>";
+  }
+</script>
+</body>
+</html>
