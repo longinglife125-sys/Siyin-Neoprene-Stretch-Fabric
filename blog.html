@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 🎯 Blog 页面专属 SEO 标题 -->
+  <title>Technical Textile Blog &amp; Activewear Guides | Siyin</title>
+  
+  <!-- 🎯 Blog 页面专属 SEO 描述 -->
+  <meta name="description" content="Explore professional guides on neoprene lamination, rubber properties (SBR/SCR/CR), fabric GSM selection, and high-performance sportswear manufacturing.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       🎨 BRAND IDENTITY (全站统一主视觉)
+       ========================================== */
+    :root {
+      --primary: #059669;          /* 活力翡翠绿 */
+      --primary-hover: #047857;
+      --dark: #111111;             /* 深石墨黑 */
+      --dark-soft: #374151;
+      --ink-soft: #6B7280;
+      --light-bg: #F9FAFB;
+      --border: #E5E7EB;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================
+       ⚙️ BASE SYSTEM RESET
+       ========================================== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-soft);
+      background-color: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    ul, ol { list-style: none; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn.primary:hover {
+      background: var(--primary-hover);
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--dark);
+      border: 1.5px solid var(--border);
+    }
+    .btn.ghost:hover {
+      background: var(--light-bg);
+      border-color: var(--dark);
+    }
+    .label-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      background: rgba(5, 150, 105, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================
+       🧭 HEADER (全站统一导航栏)
+       ========================================== */
+    header.site {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+    header.site .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    nav.main {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    nav.main a {
+      font-weight: 500;
+      font-size: 14.5px;
+      color: var(--dark-soft);
+    }
+    nav.main a:hover, nav.main a.active {
+      color: var(--primary);
+    }
+    .nav-cta {
+      background: var(--dark);
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .nav-cta:hover { background: var(--primary); }
+
+    /* 下拉菜单 */
+    .dropdown { position: relative; cursor: pointer; }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%; left: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 0;
+      min-width: 240px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      opacity: 0; visibility: hidden;
+      transform: translateY(10px);
+      transition: var(--transition);
+    }
+    .dropdown:hover .dropdown-menu {
+      opacity: 1; visibility: visible; transform: translateY(0);
+    }
+    .dropdown-menu a {
+      display: block; padding: 10px 20px; font-size: 14px; color: var(--dark-soft);
+    }
+    .dropdown-menu a:hover { background: var(--light-bg); color: var(--primary); }
+
+    /* ==========================================
+       🏔️ PAGE HERO (博客页头部)
+       ========================================== */
+    .page-hero {
+      background: var(--light-bg);
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .page-hero p {
+      font-size: 16px;
+      color: var(--ink-soft);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================
+       📰 BLOG LAYOUT (双栏布局：左文章列表，右侧边栏栏目)
+       ========================================== */
+    .section-padding { padding: 80px 0; }
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 48px;
+    }
+
+    /* 文章卡片设计 */
+    .blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .blog-post {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+    }
+    .blog-post:last-child {
+      border-bottom: none;
+    }
+    .post-thumb {
+      background: #e5e7eb;
+      height: 320px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+    }
+    .post-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+    }
+    .post-meta span { display: flex; align-items: center; gap: 4px; }
+    .post-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .post-title:hover {
+      color: var(--primary);
+    }
+    .post-excerpt {
+      font-size: 15px;
+      color: var(--dark-soft);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* 侧边栏 */
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .sidebar-widget {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sidebar-widget h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 8px;
+      width: fit-content;
+    }
+    .category-list li {
+      margin-bottom: 12px;
+    }
+    .category-list a {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: var(--dark-soft);
+    }
+    .category-list a:hover {
+      color: var(--primary);
+    }
+    .cta-widget {
+      background: var(--dark);
+      color: #fff;
+      border: none;
+      text-align: center;
+    }
+    .cta-widget h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-widget p {
+      font-size: 13px;
+      color: #9CA3AF;
+      margin-bottom: 20px;
+    }
+
+    /* ==========================================
+       📬 QUICK INQUIRY MODAL (询盘弹窗)
+       ========================================== */
+    .qr-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(11, 11, 11, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0; pointer-events: none;
+      transition: var(--transition);
+    }
+    .qr-overlay.open { opacity: 1; pointer-events: auto; }
+    .qr-modal {
+      background: #fff; border-radius: 16px; width: 100%; max-width: 540px; padding: 36px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); position: relative;
+      transform: scale(0.95); transition: var(--transition);
+    }
+    .qr-overlay.open .qr-modal { transform: scale(1); }
+    .qr-close {
+      position: absolute; top: 24px; right: 24px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--ink-soft);
+    }
+    .field { margin-bottom: 18px; }
+    .field label { display: block; font-weight: 600; font-size: 13.5px; color: var(--dark); margin-bottom: 6px; }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 14px;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--primary); }
+
+    /* ==========================================
+       👣 FOOTER (全站统一页脚)
+       ========================================== */
+    footer { background: var(--dark); color: #9CA3AF; padding: 64px 0 32px; font-size: 14px; }
+    .foot-grid {
+      display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 48px; margin-bottom: 48px;
+    }
+    .foot-col h5 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 20px; }
+    .foot-col p { margin-bottom: 16px; }
+    .foot-col a { display: block; color: #9CA3AF; margin-bottom: 12px; }
+    .foot-col a:hover { color: var(--primary); }
+    .foot-bottom {
+      border-top: 1px solid #1F2937; padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px;
+    }
+
+    .menu-toggle { display: none; }
+    @media(max-width: 768px) {
+      .blog-layout { grid-template-columns: 1fr; }
+      nav.main { display: none; }
+      .menu-toggle { display: block; background: none; border: none; font-size: 24px; cursor: pointer; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🧭 导航栏 -->
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>Siyin</a>
+    <button class="menu-toggle" onclick="alert('Menu')" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <span class="dropdown">
+        <a href="neoprene-laminated-fabric.html">Products</a>
+        <div class="dropdown-menu">
+          <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+          <a href="stretch-fabric.html">Stretch Fabric</a>
+        </div>
+      </span>
+      <a href="oem-odm.html">OEM &amp; ODM</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="nav-cta" onclick="openQuickReply();return false;">Get a Quick Reply</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 🏔️ 页面头部 -->
+<section class="page-hero">
+  <div class="wrap">
+    <span class="label-tag">Siyin Knowledge Hub</span>
+    <h1>Technical Textile Insights</h1>
+    <p>Professional guides, manufacturing secrets, and material selection tips from our chief fabric engineers.</p>
+  </div>
+</section>
+
+<!-- 📰 博客主版块 -->
+<section class="section-padding">
+  <div class="wrap">
+    <div class="blog-layout">
+      
+      <!-- 左栏：高品质文章列表（带真实高频谷歌搜索词设计） -->
+      <main class="blog-list">
+        
+        <!-- 文章 1：针对潜水料核心痛点的文章（SCR/SBR/CR 的区别） -->
+        <article class="blog-post">
+          <div class="post-thumb">[SBR vs SCR vs CR Neoprene Materials Structure Image]</div>
+          <div class="post-meta">
+            <span>📅 July 15, 2026</span>
+            <span>🏷️ Neoprene Technical Guides</span>
+          </div>
+          <a href="blog-neoprene-comparison.html">
+            <h2 class="post-title">SBR vs SCR vs CR Neoprene: How to Choose the Right Material for Your Products</h2>
+          </a>
+          <p class="post-excerpt">Confused about which neoprene blend to choose? This in-depth guide covers the chemical differences, compression limits, and cost-efficiency trade-offs of SBR, SCR, and CR rubber sheets for diving suits, braces, and sleeves.</p>
+          <a href="#" class="btn ghost" style="padding: 8px 16px;" onclick="alert('This is a demo layout. We can write detailed blog pages as needed.');return false;">Read Full Article</a>
+        </article>
+
+        <!-- 文章 2：针对运动服成衣买家痛点的文章（面料克重与比例选择） -->
+        <article class="blog-post">
+          <div class="post-thumb">[Fabric GSM &amp; Spandex Ratio testing Image]</div>
+          <div class="post-meta">
+            <span>📅 June 12, 2026</span>
+            <span>🏷️ Activewear Fabric Tips</span>
+          </div>
+          <a href="blog-activewear-gsm-guide.html">
+            <h2 class="post-title">Selecting the Perfect Fabric Weight (GSM) and Blend for High-Performance Yoga Wear</h2>
+          </a>
+          <p class="post-excerpt">Understanding Fabric Weight (GSM) is crucial for clothing brands. We explain the science behind choosing between 220GSM and 280GSM interlock knit fabrics, and why spandex percentages matter for squat-proof leggings.</p>
+          <a href="#" class="btn ghost" style="padding: 8px 16px;" onclick="alert('This is a demo layout. We can write detailed blog pages as needed.');return false;">Read Full Article</a>
+        </article>
+
+      </main>
+
+      <!-- 右栏：侧边栏 -->
+      <aside class="blog-sidebar">
+        
+        <!-- 栏目分类 -->
+        <div class="sidebar-widget">
+          <h4>Categories</h4>
+          <ul class="category-list">
+            <li><a href="#"><span>Neoprene Lamination Guides</span> <span>(12)</span></a></li>
+            <li><a href="#"><span>Yoga Fabric Selection</span> <span>(8)</span></a></li>
+            <li><a href="#"><span>Sportswear OEM Process</span> <span>(5)</span></a></li>
+            <li><a href="#"><span>Factory Technical News</span> <span>(3)</span></a></li>
+          </ul>
+        </div>
+
+        <!-- 侧边栏转化组件：引导拿样书 -->
+        <div class="sidebar-widget cta-widget">
+          <h3>Request Fabric Swatch Book</h3>
+          <p>Get a physical touch of our buttery soft Nylon-Spandex and custom laminated neoprene sheets. Ship within 48 hours.</p>
+          <button class="btn primary" style="width: 100%;" onclick="openQuickReply()">Get Free Swatches</button>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- 👣 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h5>Siyin Fabric</h5>
+        <p>Dongguan Siyin Sports Goods Co., Ltd. — Expert in neoprene lamination, high-performance stretch textiles, and premium OEM apparel production.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Products &amp; Service</h5>
+        <a href="neoprene-laminated-fabric.html">Neoprene Laminated Fabric</a>
+        <a href="stretch-fabric.html">Stretch Fabrics (Yoga)</a>
+        <a href="oem-odm.html">OEM Activewear Clothing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">About Siyin</a>
+        <a href="blog.html">Technical Blog</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <p>Dongguan, Guangdong, China</p>
+        <a href="mailto:sales@siyinfabric.com">sales@siyinfabric.com</a>
+        <a href="https://wa.me/8618307510254">WhatsApp: +86 183 0751 0254</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Dongguan Siyin Sports Goods Co., Ltd. All Rights Reserved.</span>
+      <span>ISO 9001:2015 &middot; GRS 4.0 Certified Factory</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 📬 专业询盘弹窗 -->
+<div class="qr-overlay" id="qrOverlay" onclick="if(event.target===this)closeQuickReply();">
+  <div class="qr-modal">
+    <button class="qr-close" onclick="closeQuickReply()">&times;</button>
+    <h3 id="qrTitle">Request Fabric Swatch Pack</h3>
+    <p style="font-size:14px;color:var(--ink-soft);margin:8px 0 20px;">We offer free A4 swatch samples for established businesses. Fill out your details and we will ship via DHL/FedEx.</p>
+    <div class="field"><label>Your Name</label><input type="text" placeholder="John Doe"></div>
+    <div class="field"><label>Business Email / WhatsApp</label><input type="text" placeholder="john@brand.com"></div>
+    <div class="field"><label>Sample Needed</label>
+      <select>
+        <option>All Products Swatch Book</option>
+        <option>Neoprene Material Swatch Book Only</option>
+        <option>Activewear / Yoga Fabric Swatch Book Only</option>
+      </select>
+    </div>
+    <div class="field"><label>Delivery Address &amp; Courier Account (Optional)</label>
+      <textarea placeholder="e.g. 123 Fashion Blvd, Los Angeles, CA, USA. DHL Account: 123456789"></textarea>
+    </div>
+    <button type="button" class="btn primary" style="width:100%;" onclick="alert('Sample request submitted successfully!')">Request Free Samples</button>
+  </div>
+</div>
+
+<script>
+  function openQuickReply(){document.getElementById('qrOverlay').classList.add('open');}
+  function closeQuickReply(){document.getElementById('qrOverlay').classList.remove('open');}
+</script>
+</body>
+</html>
