@@ -3,163 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- 🎯 SEO Meta Tags -->
-  <title>Premium Neoprene &amp; Stretch Fabric Manufacturer Since 2002 | Siyin</title>
-  <meta name="description" content="Siyin (Est. 2002) is an ISO 9001 &amp; GRS 4.0 certified mill specializing in technical neoprene sheet lamination and premium high-stretch sportswear textiles. Ready-to-ship inventory and high-precision custom engineering.">
-  
+  <title>Premium Neoprene & Stretch Fabric Manufacturer Since 2002 | Siyin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* ==========================================
-       🎨 BRAND IDENTITY (全站统一主视觉)
-       ========================================== */
     :root {
-      --primary: #059669;          /* 活力翡翠绿 */
+      --primary: #059669;
       --primary-hover: #047857;
-      --dark: #0F172A;             /* 深科技蓝黑 */
-      --dark-soft: #334155;
-      --ink-soft: #64748B;
-      --light-bg: #F8FAFC;
-      --border: #E2E8F0;
-      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      --dark: #0f172a;
+      --ink: #334155;
+      --ink-soft: #64748b;
+      --bg-light: #f8fafc;
+      --border: #e2e8f0;
     }
 
-    /* ==========================================
-       ⚙️ BASE SYSTEM RESET
-       ========================================== */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      color: var(--dark-soft);
-      background-color: #fff;
-      line-height: 1.6;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background-color: #ffffff;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    a { text-decoration: none; color: inherit; transition: var(--transition); }
-    ul, ol { list-style: none; }
 
-    /* 通用按钮 */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 28px;
-      font-weight: 600;
-      font-size: 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      border: none;
-      transition: var(--transition);
-    }
-    .btn.primary {
-      background: var(--primary);
-      color: #fff;
-      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
-    }
-    .btn.primary:hover {
-      background: var(--primary-hover);
-      transform: translateY(-1px);
-    }
-    .btn.secondary {
-      background: #fff;
-      color: var(--dark);
-      border: 1.5px solid var(--border);
-    }
-    .btn.secondary:hover {
-      background: var(--light-bg);
-      border-color: var(--dark);
-    }
-    .label-tag {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--primary);
-      background: rgba(5, 150, 105, 0.1);
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: 16px;
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
-    /* ==========================================
-       🧭 HEADER & NAVIGATION (导航栏与下拉菜单)
-       ========================================== */
-    header.site {
-      border-bottom: 1px solid var(--border);
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    header {
       position: sticky;
       top: 0;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
-      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      height: 72px;
+      display: flex;
+      align-items: center;
     }
-    header.site .wrap {
+
+    .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 72px;
+      width: 100%;
     }
+
     .logo {
-      font-weight: 800;
-      font-size: 22px;
-      color: var(--dark);
       display: flex;
       align-items: center;
       gap: 8px;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.02em;
     }
-    .logo .dot {
-      width: 8px;
-      height: 8px;
-      background: var(--primary);
-      border-radius: 50%;
-    }
-    nav.main { display: flex; align-items: center; gap: 24px; }
-    nav.main a { font-weight: 500; font-size: 14.5px; color: var(--dark-soft); }
-    nav.main a:hover, nav.main a.active { color: var(--primary); }
-    .nav-cta {
-      background: #25D366;
-      color: #fff !important;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .nav-cta:hover { background: #128C7E; }
 
-    /* 下拉菜单基础设置 */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-trigger {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      cursor: pointer;
-      padding: 10px 0;
-    }
-    .dropdown-trigger .arrow {
-      font-size: 10px;
-      transition: var(--transition);
-    }
-    .dropdown:hover .dropdown-trigger .arrow {
-      transform: rotate(180deg);
+    .logo span {
       color: var(--primary);
     }
-    /* 下拉菜单面板 */
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-item {
+      position: relative;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      padding: 24px 0;
+      transition: color 0.15s ease;
+      cursor: pointer;
+    }
+
+    .nav-item:hover {
+      color: var(--primary);
+    }
+
+    .nav-item i {
+      font-size: 10px;
+      margin-left: 4px;
+      vertical-align: middle;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-item:hover i {
+      transform: rotate(180deg);
+    }
+
+    /* 2026极简多列大下拉菜单 (Mega Menu) */
     .dropdown-menu {
       position: absolute;
       top: 100%;
       left: 50%;
       transform: translateX(-50%) translateY(10px);
       background: #ffffff;
-      width: 680px;
+      width: 820px;
       border: 1px solid var(--border);
       border-radius: 12px;
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
@@ -172,707 +128,671 @@
       transition: all 0.2s ease-in-out;
       z-index: 200;
     }
-    .dropdown:hover .dropdown-menu {
+
+    .nav-item:hover .dropdown-menu {
       opacity: 1;
       visibility: visible;
       transform: translateX(-50%) translateY(0);
     }
+
     .dropdown-group h5 {
       font-size: 13px;
       font-weight: 800;
-      color: var(--dark);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 12px;
-      border-bottom: 2px solid rgba(5, 150, 105, 0.1);
-      padding-bottom: 6px;
+      color: var(--dark);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed var(--border);
     }
+
     .dropdown-group a {
       display: block;
-      font-size: 13.5px;
-      color: var(--ink-soft) !important;
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--ink-soft);
       padding: 6px 0;
-      font-weight: 400;
+      font-weight: 500;
+      transition: all 0.15s ease;
     }
+
     .dropdown-group a:hover {
-      color: var(--primary) !important;
+      color: var(--primary);
       padding-left: 4px;
     }
 
-    /* ==========================================
-       🔥 HERO SECTION (第一屏：大厂格局)
-       ========================================== */
+    .btn-header {
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-header:hover {
+      background: var(--primary-hover);
+    }
+
+    /* ==========================================================================
+       HERO BANNER (左文右图)
+       ========================================================================== */
     .hero {
-      padding: 80px 0;
-      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+      padding: 90px 0;
+      background: #ffffff;
       border-bottom: 1px solid var(--border);
     }
+
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 48px;
+      grid-template-columns: 1.10fr 0.90fr;
+      gap: 60px;
       align-items: center;
     }
-    .hero-text h1 {
-      font-size: 44px;
-      font-weight: 800;
-      color: var(--dark);
-      line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -0.02em;
-    }
-    .hero-text p {
-      font-size: 16.5px;
-      color: var(--ink-soft);
-      margin-bottom: 32px;
+
+    .hero-text {
       max-width: 580px;
     }
-    .hero-actions { display: flex; gap: 16px; margin-bottom: 40px; }
-    
-    .trust-badges {
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+    .label-tag {
+      background: rgba(5, 150, 105, 0.08);
+      color: var(--primary);
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .hero-text h1 {
+      font-size: 44px;
+      line-height: 1.15;
+      color: var(--dark);
+      font-weight: 800;
+      margin: 16px 0 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      margin-bottom: 36px;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
       gap: 16px;
     }
-    .badge-item h4 { font-size: 14.5px; color: var(--dark); font-weight: 700; }
-    .badge-item p { font-size: 12px; color: var(--ink-soft); }
 
-    /* 生产实力右侧信息卡 */
-    .hero-media {
-      background: #fff;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--dark);
+      color: #ffffff;
+    }
+
+    .btn.primary:hover {
+      background: #000000;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--dark);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
     }
-    .hero-media h3 { color: var(--dark); font-size: 20px; font-weight: 800; margin-bottom: 8px; }
-    .hero-media p { font-size: 14px; color: var(--ink-soft); margin-bottom: 20px; }
-    .spec-list { display: flex; flex-direction: column; gap: 12px; }
-    .spec-item { display: flex; justify-content: space-between; font-size: 14px; border-bottom: 1px dashed var(--border); padding-bottom: 8px; }
-    .spec-item span:first-child { color: var(--ink-soft); }
-    .spec-item span:last-child { font-weight: 600; color: var(--dark); }
 
-    /* ==========================================
-       🔍 SMART FINDER (智能检索模块)
-       ========================================== */
-    .search-section {
-      background: var(--light-bg);
-      padding: 60px 0 40px;
-      border-bottom: 1px solid var(--border);
+    .btn.secondary:hover {
+      background: var(--bg-light);
+      border-color: var(--dark);
     }
-    .search-bar-container {
-      max-width: 680px;
-      margin: 0 auto 24px;
+
+    .hero-image-container {
       position: relative;
     }
-    .search-input {
+
+    .hero-image-container img {
       width: 100%;
-      padding: 16px 24px;
-      font-size: 16px;
-      border: 1.5px solid var(--border);
-      border-radius: 12px;
-      outline: none;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
-      transition: var(--transition);
+      height: 400px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
     }
-    .search-input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
-    }
-    .filter-tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .filter-btn {
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: 600;
-      background: #fff;
+
+    /* 浮动实力勋章 */
+    .badge-float {
+      position: absolute;
+      bottom: -15px;
+      left: 30px;
+      background: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
       border: 1px solid var(--border);
-      border-radius: 30px;
-      cursor: pointer;
-      transition: var(--transition);
     }
-    .filter-btn.active, .filter-btn:hover {
-      background: var(--primary);
-      color: #fff;
+
+    .badge-float span.num {
+      display: block;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .badge-float span.desc {
+      font-size: 11px;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
+    /* 简短信任背书栏 */
+    .trust-footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 15px;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .trust-item span {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    /* ==========================================================================
+       SWATCH LIBRARY (检索器区域，保留原系统逻辑)
+       ========================================================================== */
+    .swatch-section {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: var(--dark);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title p {
+      color: var(--ink-soft);
+      margin-top: 8px;
+    }
+
+    .search-container {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+      border: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+
+    .search-inputs {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr 1.2fr;
+      gap: 16px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .input-group label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      letter-spacing: 0.05em;
+    }
+
+    .search-inputs input, 
+    .search-inputs select {
+      padding: 12px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--dark);
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .search-inputs input:focus, 
+    .search-inputs select:focus {
       border-color: var(--primary);
     }
 
-    /* ==========================================
-       📦 PRODUCTS GRID (产品数据流)
-       ========================================== */
-    .products-section { padding: 60px 0 80px; }
-    .products-grid {
+    .grid-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
     }
-    .product-card {
-      background: #fff;
+
+    .card {
+      background: #ffffff;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 8px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition);
+      transition: all 0.2s ease;
+      position: relative;
     }
-    .product-card:hover {
+
+    .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
     }
-    .product-img {
-      background: #F1F5F9;
-      height: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ink-soft);
+
+    .card-img {
+      height: 180px;
+      background: #e2e8f0;
       position: relative;
     }
-    .product-code {
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tag-category {
       position: absolute;
-      top: 12px; left: 12px;
+      top: 12px;
+      left: 12px;
       background: var(--dark);
-      color: #fff;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
       padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .card-body {
+      padding: 16px;
+    }
+
+    .swatch-code {
       font-size: 11px;
       font-weight: 700;
-      border-radius: 4px;
-      letter-spacing: 0.05em;
+      color: var(--primary);
     }
-    .product-info {
-      padding: 24px;
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 4px 0 12px;
+    }
+
+    .card-meta {
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
-    }
-    .product-info h3 { font-size: 18px; color: var(--dark); margin-bottom: 8px; font-weight: 700; }
-    .product-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-    .product-tag { font-size: 11px; background: var(--light-bg); color: var(--primary); font-weight: 500; padding: 2px 8px; border-radius: 4px; }
-    .product-info p { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 20px; flex-grow: 1; }
-    .product-meta { font-size: 12.5px; border-top: 1px solid var(--border); padding-top: 12px; margin-bottom: 16px; color: var(--dark-soft); }
-    .product-link {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--primary);
-      display: inline-flex;
-      align-items: center;
       gap: 4px;
+      font-size: 12px;
+      color: var(--ink-soft);
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
     }
-    .product-link:hover { color: var(--primary-hover); }
 
-    /* ==========================================
-       🔧 CAPABILITIES & SPECIALTIES (专业工艺展现)
-       ========================================== */
-    .custom-section { background: var(--light-bg); padding: 80px 0; }
-    .custom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .custom-box { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 40px; }
-    .custom-box h3 { font-size: 22px; font-weight: 800; margin-bottom: 24px; color: var(--dark); display: flex; align-items: center; gap: 10px; }
-    .custom-list li { margin-bottom: 16px; font-size: 14.5px; display: flex; align-items: flex-start; gap: 12px; line-height: 1.6; }
-    .custom-list li strong { color: var(--dark); }
-    .custom-list.yes li::before { content: "✦"; color: var(--primary); font-weight: bold; font-size: 18px; line-height: 1; }
-
-    /* 5步专业对接流 */
-    .steps-container { margin-top: 64px; }
-    .steps-title { text-align: center; margin-bottom: 40px; font-size: 26px; font-weight: 800; color: var(--dark); }
-    .steps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-    .step-card { background: #fff; border: 1px solid var(--border); padding: 28px 20px; border-radius: 12px; text-align: center; transition: var(--transition); }
-    .step-card:hover { transform: translateY(-2px); border-color: var(--primary); }
-    .step-num { font-size: 24px; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
-    .step-card h4 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
-    .step-card p { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
-
-    /* ==========================================
-       🏛️ GLOBAL STANDARDS & TRUST (全球检测与认证)
-       ========================================== */
-    .trust-section { padding: 80px 0; }
-    .cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
-    .cert-card { border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; background: #fff; }
-    .cert-icon { font-size: 36px; margin-bottom: 16px; }
-    .cert-card h4 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-    .cert-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
-
-    /* ==========================================
-       📬 CONVERSION CTA (极速询盘)
-       ========================================== */
-    .cta-banner {
-      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-      color: #fff;
-      text-align: center;
-      padding: 80px 0;
-    }
-    .cta-banner h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; }
-    .cta-banner p { font-size: 17px; color: #94A3B8; max-width: 600px; margin: 0 auto 32px; }
-
-    /* ==========================================
-       👣 FOOTER
-       ========================================== */
-    footer {
-      background: #0B0F19;
-      color: #64748B;
-      padding: 64px 0 32px;
-      font-size: 14px;
-      border-top: 1px solid #1E293B;
-    }
-    .foot-grid {
-      display: grid;
-      grid-template-columns: 1.5fr repeat(3, 1fr);
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-    .foot-col h5 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 20px; }
-    .foot-col p { margin-bottom: 16px; line-height: 1.6; }
-    .foot-col a { display: block; color: #94A3B8; margin-bottom: 12px; }
-    .foot-col a:hover { color: var(--primary); }
-    .foot-bottom {
-      border-top: 1px solid #1E293B;
-      padding-top: 32px;
+    .meta-row {
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 13px;
     }
 
-    /* 🚀 回到顶部 */
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 48px;
-      height: 48px;
-      background-color: var(--primary);
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
-      transition: var(--transition);
-      opacity: 0;
-      visibility: hidden;
-      z-index: 999;
+    .meta-row span:first-child {
+      font-weight: 500;
     }
-    .back-to-top.show { opacity: 1; visibility: visible; }
 
-    /* 响应式适配 */
-    @media (max-width: 992px) {
-      .hero-grid, .custom-grid { grid-template-columns: 1fr; }
-      .cert-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }
-      .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .meta-row span:last-child {
+      color: var(--dark);
+      font-weight: 600;
     }
-    @media (max-width: 768px) {
-      nav.main { display: none; }
-      .hero-text h1 { font-size: 32px; }
-      .products-grid, .steps-grid, .cert-grid { grid-template-columns: 1fr; }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 48px;
+      color: var(--ink-soft);
     }
   </style>
 </head>
 <body>
 
-<!-- 🧭 导航栏 -->
-<header class="site">
-  <div class="wrap">
-    <a href="index.html" class="logo"><span class="dot"></span>Siyin</a>
-    <nav class="main">
-      <a href="index.html" class="active">Home</a>
+  <!-- ==========================================================================
+       HEADER (导航大升级：按买家最自然的检索路径分类)
+       ========================================================================== */ -->
+  <header>
+    <div class="wrap header-container">
+      <a href="index.html" class="logo">Siyin<span>.</span></a>
       
-      <!-- 🎯 Products 下拉菜单开始 -->
-      <div class="dropdown">
-        <a href="#quick-search" class="dropdown-trigger">Products <span class="arrow">▼</span></a>
-        <div class="dropdown-menu">
-          <!-- 分类 1：Neoprene 系列 -->
-          <div class="dropdown-group">
-            <h5>Neoprene Lamination</h5>
-            <a href="neoprene-laminated-fabric.html">All Neoprene Fabrics</a>
-            <a href="neoprene-laminated-fabric.html?type=SBR">SBR Neoprene Sheets</a>
-            <a href="neoprene-laminated-fabric.html?type=CR">CR Premium Sheets</a>
-            <a href="neoprene-laminated-fabric.html?type=Embossed">Embossed &amp; Perforated</a>
-          </div>
-          <!-- 分类 2：弹性面料系列 -->
-          <div class="dropdown-group">
-            <h5>Stretch Fabrics</h5>
-            <a href="stretch-fabric.html">All Stretch Fabrics</a>
-            <a href="stretch-fabric.html?type=Yoga">Yoga &amp; Sportswear</a>
-            <a href="stretch-fabric.html?type=Lycra">Premium Lycra Series</a>
-            <a href="stretch-fabric.html?type=Brushed">Brushed &amp; Thermal</a>
-          </div>
-          <!-- 分类 3：成品/OEM定制 -->
-          <div class="dropdown-group">
-            <h5>OEM Solutions</h5>
-            <a href="oem-odm.html">Laptop Sleeves &amp; Bags</a>
-            <a href="oem-odm.html">Sports &amp; Medical Supports</a>
-            <a href="oem-odm.html">Can Coolers &amp; Coasters</a>
+      <nav>
+        <a href="index.html" class="nav-item">Home</a>
+        
+        <!-- Products 下拉菜单升级版：三列排开，让客户一眼秒懂 -->
+        <div class="nav-item">
+          Products <i>▼</i>
+          <div class="dropdown-menu">
+            
+            <!-- Column 1: 按用途/材质 (Neoprene Raw Material & Lamination) -->
+            <div class="dropdown-group">
+              <h5>Neoprene Materials</h5>
+              <a href="neoprene-laminated-fabric.html">All Neoprene Sheets</a>
+              <a href="neoprene-laminated-fabric.html?type=Wetsuit">Wetsuit &amp; Diving Grade (CR/SCR)</a>
+              <a href="neoprene-laminated-fabric.html?type=Commercial">Bag &amp; Koozie Materials (SBR)</a>
+              <a href="neoprene-laminated-fabric.html?type=Perforated">Punched &amp; Breathable Sheets</a>
+              <a href="neoprene-laminated-fabric.html?type=Embossed">Embossed (Anti-Slip Sharkskin)</a>
+              <a href="neoprene-laminated-fabric.html?type=Eco">GRS 4.0 Eco-Friendly Rubber</a>
+            </div>
+
+            <!-- Column 2: 运动针织工艺 (Activewear & Performance Textiles) -->
+            <div class="dropdown-group">
+              <h5>Stretch Fabrics</h5>
+              <a href="stretch-fabric.html">All Activewear Fabrics</a>
+              <a href="stretch-fabric.html?type=Yoga">Yoga &amp; Gym Wear Jersey</a>
+              <a href="stretch-fabric.html?type=Nylon">Premium Nylon Lycra</a>
+              <a href="stretch-fabric.html?type=Brushed">Brushed Warmth (Peach Skin)</a>
+              <a href="stretch-fabric.html?type=Printed">Custom Digital Printed Fabric</a>
+              <a href="stretch-fabric.html?type=Velcro">Hook-Loop Compatible (OK Cloth)</a>
+            </div>
+
+            <!-- Column 3: 成品应用一览 (OEM / Finished Product Applications) -->
+            <div class="dropdown-group">
+              <h5>OEM/ODM Solutions</h5>
+              <a href="oem-odm.html">All Finished Products</a>
+              <a href="oem-odm.html?cat=braces">Sports Braces &amp; Supports</a>
+              <a href="oem-odm.html?cat=bags">Neoprene Bags &amp; Totes</a>
+              <a href="oem-odm.html?cat=sleeves">Laptop &amp; Tablet Sleeves</a>
+              <a href="oem-odm.html?cat=koozies">Can Coolers &amp; Bottle Koozies</a>
+              <a href="oem-odm.html?cat=lifestyle">Pet Vests &amp; Slimming Belts</a>
+            </div>
+
           </div>
         </div>
-      </div>
-      <!-- 🎯 Products 下拉菜单结束 -->
 
-      <a href="oem-odm.html">OEM Solutions</a>
-      <a href="about.html">About Siyin</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://wa.me/8618307510254" class="nav-cta" target="_blank">
+        <a href="oem-odm.html" class="nav-item">OEM Solutions</a>
+        <a href="about.html" class="nav-item">About Siyin</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </nav>
+
+      <a href="https://wa.me/8613424750172" class="btn-header" target="_blank">
         💬 WhatsApp Fast Reply
       </a>
-    </nav>
-  </div>
-</header>
+    </div>
+  </header>
 
-<!-- 🔥 第一屏：大厂格局，展示核心数据与敏捷优势 -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <span class="label-tag">Direct Material Mill Since 2002</span>
-        <h1>Engineered Neoprene Lamination &amp; High-Stretch Sportswear Textiles</h1>
-        <p>Dongguan Siyin Sports Goods Co., Ltd. is a fully certified manufacturing partner specializing in advanced lamination engineering and high-performance knitting. We power leading international brands across 30+ countries.</p>
+  <!-- ==========================================================================
+       HERO BANNER (极致精炼文案 + 右侧高清面料大图)
+       ========================================================================== */ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
         
-        <div class="hero-actions">
-          <a href="#quick-search" class="btn primary">Browse Swatch Database</a>
-          <a href="contact.html" class="btn secondary">Inquire Sample Book</a>
-        </div>
-
-        <div class="trust-badges">
-          <div class="badge-item">
-            <h4>24 Years Expertise</h4>
-            <p>Industrial scale since 2002</p>
+        <!-- 左侧：精炼、突出实力的买家文案 -->
+        <div class="hero-text">
+          <span class="label-tag">Dongguan Direct Mill Since 2002</span>
+          <h1>Your Reliable Partner for Custom Neoprene &amp; Stretch Fabrics</h1>
+          <p>
+            24 years of manufacturing excellence in high-performance lamination, functional knitting, and custom OEM products. Global standards, GRS 4.0 certified.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#quick-search" class="btn primary">Browse Swatch Library</a>
+            <a href="contact.html" class="btn secondary">Get Free Swatch Book</a>
           </div>
-          <div class="badge-item">
-            <h4>8,000㎡ Mill</h4>
-            <p>70+ Advanced machines</p>
-          </div>
-          <div class="badge-item">
-            <h4>Global Compliance</h4>
-            <p>GRS 4.0, REACH, ISO 9001</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- 右侧：工业级数据卡片 -->
-      <div class="hero-media">
-        <h3>SIYIN CAPABILITIES</h3>
-        <p>Direct supply, standard certifications, and optimized production lead times.</p>
-        <div class="spec-list">
-          <div class="spec-item"><span>Location</span><span>Dongguan, Guangdong, China</span></div>
-          <div class="spec-item"><span>Standard MOQ</span><span>500m (Stock Colors) / 1,000m (Custom)</span></div>
-          <div class="spec-item"><span>Prototyping Leadtime</span><span>3 - 7 Business Days</span></div>
-          <div class="spec-item"><span>Bulk Turnaround</span><span>15 - 30 Days</span></div>
-          <div class="spec-item"><span>Key Testing Standards</span><span>Color Fastness Grade 4-5, UPF 50+, Reach 250</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 🔍 智能快捷搜索与筛选模块 -->
-<section class="search-section" id="quick-search">
-  <div class="wrap">
-    <div style="text-align: center; margin-bottom: 28px;">
-      <h2 style="font-size: 28px; color: var(--dark); font-weight: 800;">Instant Textile Swatch Finder</h2>
-      <p style="font-size: 15px; color: var(--ink-soft);">Filter our standard program in real-time. Enter codes (e.g., "Y01", "N01") or performance keywords.</p>
-    </div>
-    
-    <div class="search-bar-container">
-      <input type="text" id="searchInput" class="search-input" placeholder="Type keywords: SBR, CR, Lycra, Brushed, Camouflage..." oninput="filterProducts()">
-    </div>
-    
-    <div class="filter-tabs">
-      <button class="filter-btn active" onclick="setCategory('all')">All Swatches (39)</button>
-      <button class="filter-btn" onclick="setCategory('yoga')">Yoga &amp; Sportswear Series (14)</button>
-      <button class="filter-btn" onclick="setCategory('neoprene')">Neoprene Lamination Series (25)</button>
-    </div>
-  </div>
-</section>
-
-<!-- 📦 产品展示区域 -->
-<section class="products-section">
-  <div class="wrap">
-    <div class="products-grid" id="productGrid">
-      <!-- 动态数据载入 -->
-    </div>
-    
-    <div style="text-align: center; margin-top: 48px;">
-      <p style="margin-bottom: 20px; font-size: 14.5px; color: var(--ink-soft);">Need a custom formulation or specific composite bonding?</p>
-      <a href="contact.html" class="btn secondary">Request Technical Consultation</a>
-    </div>
-  </div>
-</section>
-
-<!-- 🔧 核心专注领域 -->
-<section class="custom-section">
-  <div class="wrap">
-    <div style="text-align: center; margin-bottom: 44px;">
-      <h2 style="font-size: 30px; font-weight: 800; color: var(--dark);">Our Manufacturing Focus</h2>
-      <p style="font-size: 15.5px; color: var(--ink-soft);">Siyin specializes in raw material excellence and flexible finished integrations.</p>
-    </div>
-    
-    <div class="custom-grid">
-      <!-- 瑜伽/运动针织面料 -->
-      <div class="custom-box">
-        <h3>Yoga &amp; Activewear Specialties</h3>
-        <ul class="custom-list yes">
-          <li><strong>Bespoke Formulation:</strong> Customize material compositions (Nylon/Spandex/Polyester) and density weight (120-350gsm).</li>
-          <li><strong>Advanced Surface Aesthetics:</strong> Custom digital printing, matte finishing, peach skin brushing, and dynamic jacquard patterns.</li>
-          <li><strong>Finished Apparel Support:</strong> Turnkey Activewear &amp; Yoga Wear OEM production based on your tech packs.</li>
-        </ul>
-      </div>
-      
-      <!-- Neoprene复合系列 -->
-      <div class="custom-box">
-        <h3>Neoprene &amp; Lamination Engineering</h3>
-        <ul class="custom-list yes">
-          <li><strong>Rapid Dispatch Program:</strong> Ready-to-ship inventory of high-grade SBR, SCR, and CR sheets/rolls to match tight schedules.</li>
-          <li><strong>Technical Fabric Bonding:</strong> Perfect hot-melt PUR lamination with Lycra, Nylon Jersey, OK fabric, Mesh, and heavy Oxford.</li>
-          <li><strong>Precision Treatments:</strong> Highly stable pattern embossing, custom punching (perforation), and foil stamping.</li>
-          <li><strong>Streamlined Product Integrations:</strong> Fast-turnaround OEM manufacturing for mousepads, bottle koozies, and laptop sleeves.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 5步高效对接 -->
-    <div class="steps-container">
-      <h3 class="steps-title">Engineered Customization Process</h3>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <h4>Clarify Application</h4>
-          <p>Define product usage (wetsuits, supports, high-compression wear).</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <h4>Specify Core Sheet</h4>
-          <p>Choose rubber grade (SBR, SCR, CR) and exact thickness (1mm-20mm).</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <h4>Select Linings</h4>
-          <p>Laminate with premium Nylon, Polyester, Lycra, or OK fabrics.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">04</div>
-          <h4>Aesthetic Finish</h4>
-          <p>Apply embossing, punching, dye sublimation, or gilding.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">05</div>
-          <h4>Scale &amp; Dispatch</h4>
-          <p>Fast-track sample validation (3-7 days) followed by bulk delivery.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 🏛️ 全球检测与认证 -->
-<section class="trust-section">
-  <div class="wrap">
-    <div style="text-align: center; margin-bottom: 16px;">
-      <h2 style="font-size: 30px; font-weight: 800; color: var(--dark);">Certified Material Performance</h2>
-      <p style="font-size: 15.5px; color: var(--ink-soft);">Every Siyin roll is built to comply with international environmental and durability standards.</p>
-    </div>
-    
-    <div class="cert-grid">
-      <div class="cert-card">
-        <div class="cert-icon">♻️</div>
-        <h4>GRS 4.0 Certified</h4>
-        <p>Verified sustainable recycled material options.</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🧪</div>
-        <h4>REACH 250 Compliance</h4>
-        <p>Completely free of SVHC, heavy metals, and toxic plasticizers.</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🛡️</div>
-        <h4>SGS &amp; OEKO-TEX</h4>
-        <p>Skin-safe fabrics testing and strict color fastness rating 4-5.</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">📉</div>
-        <h4>Lab-Tested Utility</h4>
-        <p>Anti-UV UPF 50+ and immediate tactile cooling testing certified.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 📬 CTA Banner -->
-<section class="cta-banner">
-  <div class="wrap">
-    <h2>Initiate Your Swatch Procurement</h2>
-    <p>Contact our technical consultants directly. We deliver custom quotations and complete product booklets within 2 hours.</p>
-    <a href="https://longinglife125-sys.github.io/Siyin-Neoprene-Stretch-Fabric/index.html#quick-search3" class="btn primary" style="background:#fff; color:var(--dark); box-shadow:none;">Connect on WhatsApp</a>
-  </div>
-</section>
-
-<!-- 👣 页脚 -->
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-col">
-        <h5>Siyin Fabric</h5>
-        <p>Dongguan Siyin Sports Goods Co., Ltd. — Certified manufacturer of technical neoprene laminations and premium stretch sportswear materials since 2002.</p>
-      </div>
-      <div class="foot-col">
-        <h5>Solutions</h5>
-        <a href="neoprene-laminated-fabric.html">Neoprene Fabrics</a>
-        <a href="stretch-fabric.html">Stretch Fabrics</a>
-        <a href="oem-odm.html">OEM Production</a>
-      </div>
-      <div class="foot-col">
-        <h5>Quick Links</h5>
-        <a href="about.html">About Siyin</a>
-        <a href="contact.html">Inquire Swatches</a>
-        <a href="https://wa.me/8618307510254">Direct WhatsApp</a>
-      </div>
-      <div class="foot-col">
-        <h5>Contact Details</h5>
-        <p>Liaobu Town, Dongguan, Guangdong, China</p>
-        <a href="mailto:sales@siyinfabric.com">sales@siyinfabric.com</a>
-        <a href="https://wa.me/8618307510254">WhatsApp: +86 183 0751 0254</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>&copy; 2026 Dongguan Siyin Sports Goods Co., Ltd. All Rights Reserved.</span>
-      <span>ISO 9001:2015 &middot; GRS 4.0 Certified Fabric Mill</span>
-    </div>
-  </div>
-</footer>
-
-<div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
-
-<script>
-  // ==========================================
-  // 💾 39款产品静态数据库
-  // ==========================================
-  const products = [
-    // 🧘 Yoga (14款)
-    { id: "Y01", cat: "yoga", name: "Tie Dye Fabric", material: "Nylon/Spandex", spec: "220gsm | 140-150cm", stretch: "4-Way Stretch", tags: ["Tie-Dye", "Soft Touch"], img: "tie-dye-1.jpg", desc: "Vibrant custom tie-dye design with high-elastic recovery." },
-    { id: "Y02", cat: "yoga", name: "Brushed Fabric", material: "Nylon/Spandex", spec: "230gsm | 140-150cm", stretch: "4-Way Stretch", tags: ["Brushed", "Warmth"], img: "brushed-1.jpg", desc: "Velvety handfeel ideal for thermal leggings and winter athleisure." },
-    { id: "Y03", cat: "yoga", name: "Matte Fabric", material: "Nylon/Spandex", spec: "230gsm | 140-150cm", stretch: "4-Way Stretch", tags: ["Matte", "Elegant"], img: "matte-1.jpg", desc: "Premium elegant non-reflective texture for luxury sportswear labels." },
-    { id: "Y04", cat: "yoga", name: "Camouflage Fabric", material: "Nylon/Spandex", spec: "230gsm | 140-150cm", stretch: "4-Way Stretch", tags: ["Digital Camo", "Durable"], img: "camouflage-1.jpg", desc: "Industrial digital camouflage with high color-fastness." },
-    { id: "Y05", cat: "yoga", name: "Printed Fabric", material: "Nylon/Spandex", spec: "230gsm | 140-150cm", stretch: "4-Way Stretch", tags: ["Sublimation", "Custom"], img: "printed-1.jpg", desc: "Precision sublimation printed activewear base ready for customized artwork." },
-    { id: "Y06", cat: "yoga", name: "Peach Skin Fabric", material: "Nylon/Spandex", spec: "220gsm | 140-150cm", stretch: "4-Way Stretch", tags: ["Sueded Finish", "Comfy"], img: "peach-skin-1.jpg", desc: "Buttery soft peach-fuzz texture providing incredible skin-friendly touch." },
-    { id: "Y07", cat: "yoga", name: "OK Style Fabric", material: "Nylon/Spandex", spec: "350gsm | 140cm", stretch: "4-Way Stretch", tags: ["High Weight", "Supportive"], img: "ok-style-1.jpg", desc: "Ultra-high weight structured athletic support fabric with shape retention." },
-    { id: "Y08", cat: "yoga", name: "Fake N Cloth", material: "Polyester", spec: "145gsm | 140cm", stretch: "Low Stretch", tags: ["Mesh Look", "Breathable"], img: "fake-n-1.jpg", desc: "Lightweight and airy mesh structure mimics classical N-Cloth layouts." },
-    { id: "Y09", cat: "yoga", name: "Lycra Stripe Fabric", material: "Nylon/Spandex", spec: "180gsm | 140cm", stretch: "4-Way Stretch", tags: ["Lycra", "Compression"], img: "lycra-stripe-1.jpg", desc: "Supportive elastomeric knit with distinct sporty horizontal stripes." },
-    { id: "Y10", cat: "yoga", name: "Brocade Fabric", material: "Polyester/Spandex", spec: "170gsm | 132cm", stretch: "4-Way Stretch", tags: ["Sheen", "Silk-like"], img: "brocade-1.jpg", desc: "Rich silk-like handle combined with great multi-directional stretch." },
-    { id: "Y11", cat: "yoga", name: "Crystal Soft Fabric", material: "Polyester", spec: "125gsm | 138cm", stretch: "Low Stretch", tags: ["Crystal Soft", "Lightweight"], img: "crystal-soft-1.jpg", desc: "Featherlight comfort backing material for specialized inner linings." },
-    { id: "Y12", cat: "yoga", name: "Polar Fleece Fabric", material: "Polyester", spec: "125gsm | 138cm", stretch: "Low Stretch", tags: ["Thermal", "Fleece"], img: "polar-fleece-1.jpg", desc: "High density insulating performance fleece for cold weather sportswear." },
-    { id: "Y13", cat: "yoga", name: "Silver Film Fabric", material: "Polyester", spec: "180gsm | 140cm", stretch: "Low Stretch", tags: ["Techwear", "Insulated"], img: "silver-film-1.jpg", desc: "Composite silver-shielded membrane provides dynamic thermal insulation." },
-    { id: "Y14", cat: "yoga", name: "High Elastic Fabric", material: "Nylon/Spandex", spec: "180gsm | 140cm", stretch: "4-Way Stretch", tags: ["Max Stretch", "Recovery"], img: "high-elastic-1.jpg", desc: "Engineered high spandex-load panels with absolute muscle support." },
-
-    // 🤿 Neoprene (25款)
-    { id: "N01", cat: "neoprene", name: "SBR Neoprene Sheet 2mm", material: "SBR Rubber", spec: "2.0mm Thickness | 140cm Width", stretch: "9-11° Hardness", tags: ["SBR", "Waterproof"], img: "sbr-sheet-1.jpg", desc: "Flexible SBR sheet. Premium water resistance, default 9-11 degree hardness." },
-    { id: "N02", cat: "neoprene", name: "Polyester Neoprene Fabric", material: "Polyester/SBR", spec: "125g/m² | 145cm Width", stretch: "Moderate Flex", tags: ["Polyester", "Economic"], img: "polyester-neoprene-1.jpg", desc: "Durable polyester jersey bonded SBR, perfect for sports bags." },
-    { id: "N03", cat: "neoprene", name: "Neoprene Roll 250g", material: "SBR Core", spec: "250g/m² | 150cm Width", stretch: "Custom Thickness", tags: ["Bulk Roll", "Standard"], img: "neoprene-roll-1.jpg", desc: "Industrial-grade SBR neoprene supplied in rolls. Highly customizable." },
-    { id: "N04", cat: "neoprene", name: "Printed SBR Fabric", material: "SBR / Printed", spec: "140cm Width", stretch: "Sublimation Base", tags: ["Camo/Printed", "Vibrant"], img: "printed-sbr-1.jpg", desc: "Features bright custom sublimation graphics with strong bonding longevity." },
-    { id: "N05", cat: "neoprene", name: "Embossed Neoprene", material: "SBR Core", spec: "140cm Width", stretch: "Sharkskin/Diamond", tags: ["Anti-slip", "Textured"], img: "embossed-1.jpg", desc: "Textured surface finish with sharkskin or diamond pattern for anti-slip uses." },
-    { id: "N06", cat: "neoprene", name: "Perforated Neoprene", material: "SBR / Punched", spec: "137cm Width", stretch: "Highly Breathable", tags: ["Breathable", "Orthopedic"], img: "perforated-1.jpg", desc: "Breathable punched holes, ideal for orthopedic medical supports." },
-    { id: "N07", cat: "neoprene", name: "Recycled Neoprene Fabric", material: "Eco SBR Core", spec: "GRS 4.0 Certified", stretch: "High Performance", tags: ["GRS Certified", "Eco-friendly"], img: "recycled-1.jpg", desc: "Sustainable certified recycled SBR fabric. Odorless & eco-safe." },
-    { id: "N08", cat: "neoprene", name: "PUR Laminated Neoprene", material: "SBR Core / PUR Hotmelt", spec: "Industrial Grade", stretch: "No-Delamination", tags: ["PUR Glue", "Odorless"], img: "pur-laminated-1.jpg", desc: "Bonded with premium polyurethane hot melt adhesive. Never delaminates." },
-    { id: "N09", cat: "neoprene", name: "Hot Stamping Neoprene", material: "SBR / Foil", spec: "Metallic Finishes", stretch: "High Fashion", tags: ["Metallic Foil", "Gilded"], img: "hot-stamping-1.jpg", desc: "Laminated with luxury metallic foil stamps. Perfect for retail fashion bags." },
-    { id: "N10", cat: "neoprene", name: "CR Neoprene Fabric", material: "CR Core / N-Cloth", spec: "360g/m² | 140cm Width", stretch: "High Grade", tags: ["CR Rubber", "Nylon Jersey"], img: "cr-neoprene-1.jpg", desc: "High-grade chloroprene rubber (CR) laminated with premium nylon jersey." },
-    { id: "N11", cat: "neoprene", name: "SBR Oxford Fabric", material: "SBR / Oxford Cloth", spec: "Heavy Duty Waterproof", stretch: "Tactical Spec", tags: ["Oxford Lamination", "Wearproof"], img: "oxford-1.jpg", desc: "SBR sheets bonded with heavy-duty Oxford cloth. Ideal for military & camera cases." },
-    { id: "N12", cat: "neoprene", name: "Lycra Neoprene Fabric", material: "SBR / Lycra Lamination", spec: "140cm Width", stretch: "Excellent Recovery", tags: ["Lycra", "4-Way Stretch"], img: "lycra-neoprene-1.jpg", desc: "Laminated with premium elastic Lycra for buttery-soft touch and great flex." },
-    { id: "N13", cat: "neoprene", name: "OK Cloth Neoprene", material: "SBR / OK fabric", spec: "Hook & Loop compatible", stretch: "Velcro Loop Base", tags: ["OK Fabric", "Loop Compatible"], img: "ok-cloth-1.jpg", desc: "Laminated with Japanese-style loop fabric (OK cloth) for easy hook fastening." },
-    { id: "N14", cat: "neoprene", name: "Mercerized Neoprene", material: "SBR / Mercerized Fabric", spec: "Double-Sided Sheen", stretch: "Premium Smoothness", tags: ["Mercerized", "Glossy Finish"], img: "mercerized-1.jpg", desc: "Elegant double-sided mercerized lamination. Silk-like touch for premium products." },
-    { id: "N15", cat: "neoprene", name: "Mesh Neoprene Fabric", material: "SBR / Sandwich Mesh", spec: "140cm Width", stretch: "Breathable Matrix", tags: ["Mesh bonded", "Airflow"], img: "mesh-1.jpg", desc: "Sandwiched air mesh on SBR. Highly breathable, used extensively in pet gears." },
-    { id: "N16", cat: "neoprene", name: "Single-Sided Lycra Neoprene", material: "SBR / One Side Lycra", spec: "137cm Width", stretch: "Flexible Base", tags: ["Single-sided", "Raw rubber back"], img: "single-lycra-1.jpg", desc: "Laminated on only one side with Lycra. Back side exposed raw rubber." },
-    { id: "N17", cat: "neoprene", name: "T-Cloth Neoprene", material: "SBR / T-Cloth", spec: "140cm Width", stretch: "Clean Punched", tags: ["Double T-Cloth", "Perforated"], img: "t-cloth-1.jpg", desc: "Double-sided polyester T-cloth lamination with clean perforated holes." },
-    { id: "N18", cat: "neoprene", name: "Eco-Friendly Neoprene", material: "SBR / Clean T-Cloth", spec: "142cm Width", stretch: "SGS Low-Odor", tags: ["Odorless", "Skin-Safe"], img: "eco-neoprene-1.jpg", desc: "Tested by SGS to guarantee low odor. Built with eco-certified fabrics." },
-    { id: "N19", cat: "neoprene", name: "CR Coated Neoprene", material: "CR Core / Silver Layer", spec: "Shiny Metallic silver", stretch: "Waterproof Shield", tags: ["CR Grade", "Silver coated"], img: "cr-coated-1.jpg", desc: "Pure CR rubber with an outer glossy silver coating layer. Highly waterproof." },
-    { id: "N20", cat: "neoprene", name: "Camouflage SBR Fabric", material: "SBR / Camo Print", spec: "140cm Width", stretch: "Tactical Pattern", tags: ["Camo SBR", "Digital Print"], img: "camouflage-sbr-1.jpg", desc: "SBR laminated with custom rugged camouflage prints. Water-resistant." },
-    { id: "N21", cat: "neoprene", name: "CR Silk Neoprene", material: "CR Core / Silk Touch", spec: "Wetsuit Grade", stretch: "Extreme Stretch", tags: ["Pure CR", "High-Flex"], img: "cr-silk-1.jpg", desc: "Professional wetsuit fabric. Maximum grade elastic CR core with high flex." },
-    { id: "N22", cat: "neoprene", name: "Double-Sided N-Cloth CR", material: "2.0 CR / Double Nylon", spec: "Saltwater Proof", stretch: "Rugged Heavy-duty", tags: ["CR Core", "Double Nylon"], img: "double-ncloth-cr-1.jpg", desc: "Industrial strength double-sided Nylon laminated CR sheet. Resists salt water." },
-    { id: "N23", cat: "neoprene", name: "Nylon Lycra Neoprene", material: "SBR / Nylon Lycra", spec: "140cm Width", stretch: "Comfort Grip", tags: ["Nylon Lycra", "Double-Sided"], img: "nylon-lycra-1.jpg", desc: "Premium double sided lamination. Durable, elastic, and highly skin-friendly." },
-    { id: "N24", cat: "neoprene", name: "Gilded T-Cloth Neoprene", material: "SBR / Gilded Finish", spec: "Yellow Metallic Gold", stretch: "Luxury Finish", tags: ["Gilded Gold", "Premium bags"], img: "gilded-tcloth-1.jpg", desc: "Coated with bright yellow-gold foil layer. Excellent lamination strength." },
-    { id: "N25", cat: "neoprene", name: "Printed Camouflage SBR", material: "SBR / Sublimated", spec: "3-Day Sampling", stretch: "PUR Laminated", tags: ["Camo SBR", "PUR bonded"], img: "printed-camo-1.jpg", desc: "High definition camo pattern sheets bonded with long-lasting hot melt PUR." },
-    { id: "N26", cat: "neoprene", name: "Double-Sided N-Cloth SBR", material: "SBR / Double Nylon", spec: "140cm Width", stretch: "Economy Spec", tags: ["Double Nylon", "Standard SBR"], img: "double-ncloth-sbr-1.jpg", desc: "Highly economical standard double nylon SBR lamination. Perfect for daily bag manufacturing." }
-  ];
-
-  let currentCategory = 'all';
-
-  function renderProducts(filteredList) {
-    const grid = document.getElementById('productGrid');
-    grid.innerHTML = '';
-    
-    if (filteredList.length === 0) {
-      grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);">No swatches match your current query. Try searching 'SBR' or 'Lycra'!</div>`;
-      return;
-    }
-
-    filteredList.forEach(p => {
-      let tagsHTML = p.tags.map(t => `<span class="product-tag">${t}</span>`).join('');
-      
-      grid.innerHTML += `
-        <div class="product-card" data-cat="${p.cat}">
-          <div class="product-img">
-            <span class="product-code">${p.id}</span>
-            <img src="images/products/${p.img}" alt="${p.name}" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('beforeend', '<div style=\'text-align:center;padding:20px; font-size:13px; color:var(--ink-soft);\'>📷 [${p.name}]<br><span style=\'font-size:11px;color:gray;\'>images/products/${p.img}</span></div>')">
-          </div>
-          <div class="product-info">
-            <h3>${p.name}</h3>
-            <div class="product-tags">${tagsHTML}</div>
-            <p>${p.desc}</p>
-            <div class="product-meta">
-              <strong>Tech Base:</strong> ${p.material}<br>
-              <strong>Density/Spec:</strong> ${p.spec}
+          
+          <!-- 实力背书 (原参数表大瘦身后保留的关键商业参数) -->
+          <div class="trust-footer">
+            <div class="trust-item">
+              <strong>500m / Color</strong>
+              <span>Low MOQ for Stock Fabric</span>
             </div>
-            <a href="contact.html?product=${p.id}" class="product-link">Inquire Fabric Spec &rarr;</a>
+            <div class="trust-item">
+              <strong>3-7 Days</strong>
+              <span>Fast Custom Prototyping</span>
+            </div>
+            <div class="trust-item">
+              <strong>GRS 4.0 &amp; REACH</strong>
+              <span>Global Direct-Sourcing Grade</span>
+            </div>
           </div>
         </div>
-      `;
-    });
-  }
+        
+        <!-- 右侧：高清工厂面料图 (极简、通透、呼吸感) -->
+        <div class="hero-image-container">
+          <img src="images/hero-fabrics.jpg" alt="Siyin Fabric Manufacturing" onerror="this.style.display='none'; this.parentNode.insertAdjacentHTML('beforeend', '<div style=\'width:100%; height:400px; background:#F1F5F9; border-radius:16px; display:flex; flex-direction:column; align-items:center; justify-content:center; border:2px dashed var(--border); text-align:center; padding:20px;\'><span style=\'font-size:48px; margin-bottom:12px;\'>🏭</span><strong style=\'color:var(--dark); font-size:16px;\'>[Factory / Fabric Image Place]</strong><p style=\'font-size:13px; color:var(--ink-soft); max-width:280px; margin-top:8px;\'>建议在此处放一张你们“厂区、高弹面料卷堆放”或者“复合机精细操作”的高清实拍照片，最能体现源头厂硬实力！</p></div>')">
+          
+          <!-- 悬浮的小数据卡片 (提升信任感) -->
+          <div class="badge-float">
+            <span class="num">8,000+ ㎡</span>
+            <span class="desc">Modern Production Facility</span>
+          </div>
+        </div>
 
-  function setCategory(cat) {
-    currentCategory = cat;
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    filterProducts();
-  }
+      </div>
+    </div>
+  </section>
 
-  function filterProducts() {
-    const query = document.getElementById('searchInput').value.toLowerCase().trim();
-    
-    const filtered = products.filter(p => {
-      const matchesCat = (currentCategory === 'all') || (p.cat === currentCategory);
-      const matchesText = p.name.toLowerCase().includes(query) || 
-                          p.id.toLowerCase().includes(query) || 
-                          p.material.toLowerCase().includes(query) || 
-                          p.desc.toLowerCase().includes(query) ||
-                          p.tags.some(t => t.toLowerCase().includes(query));
-      return matchesCat && matchesText;
-    });
+  <!-- ==========================================================================
+       SWATCH LIBRARY SECTION (检索器主模块)
+       ========================================================================== */ -->
+  <section class="swatch-section" id="quick-search">
+    <div class="wrap">
+      
+      <div class="section-title">
+        <h2>Instant Textile Swatch Finder</h2>
+        <p>Filter our standard production program in real-time. Enter codes or functional keywords.</p>
+      </div>
 
-    renderProducts(filtered);
-  }
+      <!-- 交互检索器 -->
+      <div class="search-container">
+        <div class="search-inputs">
+          <div class="input-group">
+            <label for="search-input">Keyword / Code Search</label>
+            <input type="text" id="search-input" placeholder="Type: 'Y01', 'Nylon', 'Sauna', 'Breathable'...">
+          </div>
+          <div class="input-group">
+            <label for="filter-category">Material Base</label>
+            <select id="filter-category">
+              <option value="all">All Category</option>
+              <option value="neoprene">Neoprene Laminated Fabric</option>
+              <option value="stretch">Performance Stretch Fabric</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="filter-function">Special Finish / Feature</label>
+            <select id="filter-function">
+              <option value="all">All Finishes</option>
+              <option value="GRS">Eco GRS 4.0 Certified</option>
+              <option value="Waterproof">Waterproof</option>
+              <option value="Breathable">Breathable / Perforated</option>
+              <option value="Brushed">Brushed Peach-skin</option>
+              <option value="Digital Printed">Custom Digital Printed</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-  window.onload = function() {
-    renderProducts(products);
-  };
+      <!-- 渲染结果格网 -->
+      <div class="grid-container" id="swatch-grid">
+        <!-- JS 动态注入 Swatch Cards -->
+      </div>
 
-  window.addEventListener('scroll', function() {
-    const btn = document.getElementById('backToTop');
-    if (window.pageYOffset > 300) {
-      btn.classList.add('show');
-    } else {
-      btn.classList.remove('show');
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TEXTILE DATABASE & RUNTIME SCRIPT (核心业务数据引擎)
+       ========================================================================== */ -->
+  <script>
+    // 39 款兼顾“全覆盖”与“极速定制”的核心产品库
+    const swatchDatabase = [
+      // NEOPRENE: 25 items
+      { code: "N01", title: "CR Sheet with Super Stretch Lycra Lamination", category: "neoprene", function: "Waterproof, High Stretch, GRS", base: "Premium CR 2.0mm", weight: "N/A", key_feat: "Premium diving suits, high-end sportswear", img: "n01" },
+      { code: "N02", title: "SBR Embossed Sharkskin Panel", category: "neoprene", function: "Waterproof, Non-Slip", base: "Standard SBR 3.0mm", weight: "N/A", key_feat: "Anti-slip chest panels, boots padding", img: "n02" },
+      { code: "N03", title: "SCR Perforated Breathable Fabric Lamination", category: "neoprene", function: "Breathable, Sports Grade", base: "SCR Base 2.5mm", weight: "N/A", key_feat: "Medical joint support, breathable waist trimmer", img: "n03" },
+      { code: "N04", title: "Eco-Friendly Recycled Polyester Neoprene GRS 4.0", category: "neoprene", function: "GRS, Eco-Friendly", base: "SBR Rubber 1.5mm", weight: "N/A", key_feat: "Sustainable laptop sleeves, modern backpacks", img: "n04" },
+      { code: "N05", title: "Nylon Jersey Laminated Neoprene Sheet", category: "neoprene", function: "High Stretch, Waterproof", base: "SBR/SCR Base 3.0mm", weight: "N/A", key_feat: "Wetsuits, medical braces, cup sleeves", img: "n05" },
+      { code: "N06", title: "Polyester Fabric Laminated Neoprene Sheet", category: "neoprene", function: "Durable, Eco-Friendly", base: "SBR Base 2.0mm", weight: "N/A", key_feat: "Custom printed coolers, bags, koozies", img: "n06" },
+      { code: "N07", title: "OK Cloth (Hook Compatible) Laminated Neoprene", category: "neoprene", function: "Sports Grade, Velcro Compatible", base: "SBR/SCR Base 3.0mm", weight: "N/A", key_feat: "Adjustable medical support straps & therapy wraps", img: "n07" },
+      { code: "N08", title: "Diamond Embossed Neoprene", category: "neoprene", function: "Waterproof, Abrasion Resistant", base: "SBR Base 2.5mm", weight: "N/A", key_feat: "Gloves, protective gear parts", img: "n08" },
+      { code: "N09", title: "Super Stretch Lycra Laminated Neoprene Sheet", category: "neoprene", function: "High Stretch, Premium", base: "SCR Base 2.0mm", weight: "N/A", key_feat: "Triathlon sportswear, luxury thermal gears", img: "n09" },
+      { code: "N10", title: "U-Loop Fabric Hook-Loop Compatible Neoprene", category: "neoprene", function: "Sports Grade, Velcro Compatible", base: "SCR Base 3.0mm", weight: "N/A", key_feat: "Sports protective pads, knee braces", img: "n10" },
+      { code: "N11", title: "Spandex Jersey Laminated Neoprene", category: "neoprene", function: "High Stretch", base: "SBR Base 1.5mm", weight: "N/A", key_feat: "Cosmetic bags, active life-jackets", img: "n11" },
+      { code: "N12", title: "Mesh Fabric Skin Laminated Neoprene", category: "neoprene", function: "Breathable, Structured", base: "SBR Base 4.0mm", weight: "N/A", key_feat: "Heavy duty backpacks, orthopedics cushioning", img: "n12" },
+      { code: "N13", title: "Camouflage Digital Printed Neoprene", category: "neoprene", function: "Digital Printed, Durable", base: "SBR Base 3.0mm", weight: "N/A", key_feat: "Hunting gear, outdoor bottle coolers", img: "n13" },
+      { code: "N14", title: "GRS Recycled Nylon Jersey Neoprene", category: "neoprene", function: "GRS, High Stretch", base: "Eco CR Base 2.0mm", weight: "N/A", key_feat: "Eco wetsuits, high-end surf bags", img: "n14" },
+      { code: "N15", title: "Punched Diamond Embossed Breathable Neoprene", category: "neoprene", function: "Breathable, Non-Slip", base: "SCR Base 2.5mm", weight: "N/A", key_feat: "Professional sports protection, ventilation padding", img: "n15" },
+      { code: "N16", title: "Smooth Skin (Glideskin) Neoprene Sheet", category: "neoprene", function: "Waterproof, Anti-Drag", base: "Pure CR Base 3.0mm", weight: "N/A", key_feat: "Freediving wetsuit, windproof surf jackets", img: "n16" },
+      { code: "N17", title: "Jersey Laminated SBR Eco Soft Neoprene", category: "neoprene", function: "Eco-Friendly, Soft", base: "SBR Base 1.2mm", weight: "N/A", key_feat: "Eco baby bibs, custom tablet sleeves", img: "n17" },
+      { code: "N18", title: "Terry Cloth (Toweling) Laminated Neoprene", category: "neoprene", function: "Water Absorption, Thermal", base: "SBR Base 3.5mm", weight: "N/A", key_feat: "Thermal waist belts, post-swim warming gear", img: "n18" },
+      { code: "N19", title: "PK Fabric Wear-Resistant Neoprene Sheet", category: "neoprene", function: "Durable, Abrasion Resistant", base: "SBR Base 3.0mm", weight: "N/A", key_feat: "Reinforced knee pads, tool bags, tactical gear", img: "n19" },
+      { code: "N20", title: "Double-Sided T-Cloth Laminated Neoprene", category: "neoprene", function: "Symmetrical, Durable", base: "SBR Base 2.5mm", weight: "N/A", key_feat: "Can koozies, promotional drink coolers", img: "n20" },
+      { code: "N21", title: "Anti-Microbial Lined Sports Neoprene", category: "neoprene", function: "Sports Grade, Antibacterial", base: "SCR Base 2.0mm", weight: "N/A", key_feat: "Slimming wraps, premium wrist wraps", img: "n21" },
+      { code: "N22", title: "Hyper-Elastic Span Laminated CR Neoprene", category: "neoprene", function: "High Stretch, Premium", base: "Pure CR Base 1.5mm", weight: "N/A", key_feat: "Performance swimwear, elite athletic wear", img: "n22" },
+      { code: "N23", title: "Fine Pique Knit Laminated Neoprene Sheet", category: "neoprene", function: "Durable, Textured", base: "SBR Base 3.0mm", weight: "N/A", key_feat: "Fashion bags, lifestyle pouches", img: "n23" },
+      { code: "N24", title: "Heat-Reflective Metallic Foil Backed Neoprene", category: "neoprene", function: "Thermal, Sauna Feature", base: "SBR Base 2.0mm", weight: "N/A", key_feat: "Sauna suits, extreme heat-trapping waist wraps", img: "n24" },
+      { code: "N25", title: "Mercerized Velvet Fabric Laminated Neoprene", category: "neoprene", function: "Premium Soft, Luxury", base: "SCR Base 3.0mm", weight: "N/A", key_feat: "Luxury cases, medical braces with comfort lining", img: "n25" },
+
+      // STRETCH: 14 items
+      { code: "Y01", title: "High-Gauge Recycled Nylon Lycra GRS 4.0", category: "stretch", function: "GRS, High Stretch", base: "75% Recycled Nylon, 25% Creora", weight: "240 GSM", key_feat: "Premium yoga wear, body-shaping sportswear", img: "y01" },
+      { code: "Y02", title: "Cotton-Feel Double-Brushed Peach Skin Fabric", category: "stretch", function: "Brushed, Soft Feel", base: "80% Polyester, 20% Spandex", weight: "220 GSM", key_feat: "Ultrasoft athletic leggings, thermal base layer", img: "y02" },
+      { code: "Y03", title: "Moisture Wicking Quick-Dry Interlock Jersey", category: "stretch", function: "Breathable, Sports Grade", base: "88% Polyester, 12% Spandex", weight: "180 GSM", key_feat: "Running shirts, active fitness tee", img: "y03" },
+      { code: "Y04", title: "Anti-Bacterial Silver-Ion Yoga Wear Fabric", category: "stretch", function: "Sports Grade, Antibacterial", base: "78% Nylon, 22% Spandex", weight: "230 GSM", key_feat: "High-end gym pants, medical wellness wear", img: "y04" },
+      { code: "Y05", title: "Tie-Dye Custom Pattern Printed Spandex", category: "stretch", function: "Digital Printed, Fashion", base: "85% Polyester, 15% Spandex", weight: "210 GSM", key_feat: "Designer athleisure, limited edition yoga leggings", img: "y05" },
+      { code: "Y06", title: "High-Compression Power Mesh Interlock", category: "stretch", function: "High Stretch, Breathable", base: "70% Nylon, 30% Spandex", weight: "150 GSM", key_feat: "Sports bra panels, shaping garments, cooling inserts", img: "y06" },
+      { code: "Y07", title: "High-Definition Digital Floral Printed Fabric", category: "stretch", function: "Digital Printed", base: "80% Polyester, 20% Spandex", weight: "220 GSM", key_feat: "Premium sublimated leggings, designer activewear", img: "y07" },
+      { code: "Y08", title: "Lightweight High-Breathing Ribbed Knit Fabric", category: "stretch", function: "Breathable, High Stretch", base: "90% Nylon, 10% Spandex", weight: "160 GSM", key_feat: "Athletic lifestyle wear, seamless summer vests", img: "y08" },
+      { code: "Y09", title: "UV 50+ Protection Compression Swimwear Fabric", category: "stretch", function: "Waterproof, High Stretch", base: "82% Nylon, 18% Spandex", weight: "200 GSM", key_feat: "Rash guards, outdoor swimming attire", img: "y09" },
+      { code: "Y10", title: "Heavy Weight French Terry Stretch Fleece", category: "stretch", function: "Brushed", base: "95% Cotton, 5% Spandex", weight: "320 GSM", key_feat: "Winter thermal sportswear, heavy structure hoodies", img: "y10" },
+      { code: "Y11", title: "Brushed Honeycomb Thermal Knit", category: "stretch", function: "Brushed, Breathable", base: "92% Polyester, 8% Spandex", weight: "210 GSM", key_feat: "Thermal running apparel, cold weather performance gear", img: "y11" },
+      { code: "Y12", title: "Seamless Ribbed Activewear Fabric", category: "stretch", function: "High Stretch, Structured", base: "88% Nylon, 12% Spandex", weight: "260 GSM", key_feat: "Ribbed seamless fitness wear, high-rise leggings", img: "y12" },
+      { code: "Y13", title: "Semi-Dull Nylon Lycra Tricot Fabric", category: "stretch", function: "High Stretch, Premium", base: "80% Nylon, 20% Lycra Spandex", weight: "190 GSM", key_feat: "Classical athletic wear, competition sportswear", img: "y13" },
+      { code: "Y14", title: "Premium GRS Recycled Poly Interlock", category: "stretch", function: "GRS, Eco-Friendly", base: "82% Recycled Polyester, 18% Spandex", weight: "220 GSM", key_feat: "Eco-friendly sports leggings, sustainable activewear", img: "y14" }
+    ];
+
+    // 初始化渲染
+    const grid = document.getElementById("swatch-grid");
+    const searchInput = document.getElementById("search-input");
+    const filterCategory = document.getElementById("filter-category");
+    const filterFunction = document.getElementById("filter-function");
+
+    function renderSwatches(data) {
+      grid.innerHTML = "";
+      if (data.length === 0) {
+        grid.innerHTML = `<div class="no-results">
+          <p style="font-size: 32px; margin-bottom: 8px;">🔍</p>
+          <strong>No Swatches Found Matching Your Spec</strong>
+          <p style="font-size: 13px; color: var(--ink-soft); margin-top: 4px;">Please try other keywords or contact us to build your custom fabric formula.</p>
+        </div>`;
+        return;
+      }
+
+      data.forEach(item => {
+        // 使用高保真色卡占位，模拟精美的微距面料质感图
+        const cardImg = `<div class="card-img">
+          <div style="width: 100%; height: 100%; background: linear-gradient(135deg, ${item.category === 'neoprene' ? '#334155 0%, #1e293b 100%' : '#022c22 0%, #064e3b 100%'}); opacity: 0.95; display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center; color: rgba(255,255,255,0.85); padding: 20px;">
+              <span style="font-size: 24px; display: block; margin-bottom: 4px;">🧵</span>
+              <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--primary);">${item.category} Swatch</span>
+            </div>
+          </div>
+          <span class="tag-category">${item.category === 'neoprene' ? 'Neoprene' : 'Stretch'}</span>
+        </div>`;
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          ${cardImg}
+          <div class="card-body">
+            <span class="swatch-code">${item.code}</span>
+            <h3 class="card-title">${item.title}</h3>
+            <div class="card-meta">
+              <div class="meta-row">
+                <span>Base Type:</span>
+                <span>${item.base}</span>
+              </div>
+              <div class="meta-row">
+                <span>Spec Weight:</span>
+                <span>${item.weight}</span>
+              </div>
+              <div class="meta-row" style="margin-top: 4px; padding-top: 4px; border-top: 1px dotted var(--border);">
+                <span style="font-size: 11px; color: var(--ink-soft);">Apply: ${item.key_feat}</span>
+              </div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
     }
-  });
 
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
+    // 过滤检索算法逻辑
+    function filterSwatches() {
+      const textValue = searchInput.value.toLowerCase().trim();
+      const catValue = filterCategory.value;
+      const funcValue = filterFunction.value;
 
+      const filtered = swatchDatabase.filter(item => {
+        const matchesText = item.code.toLowerCase().includes(textValue) || 
+                            item.title.toLowerCase().includes(textValue) || 
+                            item.base.toLowerCase().includes(textValue) || 
+                            item.key_feat.toLowerCase().includes(textValue);
+        
+        const matchesCat = catValue === "all" || item.category === catValue;
+        
+        let matchesFunc = true;
+        if (funcValue !== "all") {
+          matchesFunc = item.function.includes(funcValue);
+        }
+
+        return matchesText && matchesCat && matchesFunc;
+      });
+
+      renderSwatches(filtered);
+    }
+
+    // 注册过滤器监听
+    searchInput.addEventListener("input", filterSwatches);
+    filterCategory.addEventListener("change", filterSwatches);
+    filterFunction.addEventListener("change", filterSwatches);
+
+    // 首屏加载展示
+    renderSwatches(swatchDatabase);
+  </script>
 </body>
 </html>
