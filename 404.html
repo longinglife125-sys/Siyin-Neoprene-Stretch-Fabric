@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 🎯 404 页面禁用搜索引擎索引，但保持标题清晰 -->
+  <title>Page Not Found | Siyin Fabric</title>
+  <meta name="robots" content="noindex, follow">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       🎨 BRAND IDENTITY (全站统一主视觉)
+       ========================================== */
+    :root {
+      --primary: #059669;          /* 活力翡翠绿 */
+      --primary-hover: #047857;
+      --dark: #111111;             /* 深石墨黑 */
+      --dark-soft: #374151;
+      --ink-soft: #6B7280;
+      --light-bg: #F9FAFB;
+      --border: #E5E7EB;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================
+       ⚙️ BASE SYSTEM RESET
+       ========================================== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-soft);
+      background-color: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+
+    /* ==========================================
+       🧭 HEADER (全站统一导航栏)
+       ========================================== */
+    header.site {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header.site .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    nav.main {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    nav.main a {
+      font-weight: 500;
+      font-size: 14.5px;
+      color: var(--dark-soft);
+    }
+    nav.main a:hover {
+      color: var(--primary);
+    }
+    .nav-cta {
+      background: var(--dark);
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .nav-cta:hover { background: var(--primary); }
+
+    /* ==========================================
+       🕳️ 404 CONTENT AREA
+       ========================================== */
+    .error-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 0;
+      background: var(--light-bg);
+    }
+    .error-content {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .error-code {
+      font-size: 110px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 24px;
+      letter-spacing: -0.05em;
+    }
+    .error-content h1 {
+      font-size: 28px;
+      color: var(--dark);
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    .error-content p {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin-bottom: 32px;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 14.5px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn.primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--dark);
+      border: 1.5px solid var(--border);
+    }
+    .btn.ghost:hover {
+      background: #fff;
+      border-color: var(--dark);
+    }
+
+    /* ==========================================
+       👣 FOOTER (简版页脚，保持干净)
+       ========================================== */
+    footer {
+      background: var(--dark);
+      color: #9CA3AF;
+      padding: 32px 0;
+      font-size: 13.5px;
+      border-top: 1px solid #1F2937;
+    }
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .menu-toggle { display: none; }
+    @media(max-width: 768px) {
+      nav.main { display: none; }
+      .menu-toggle { display: block; background: none; border: none; font-size: 24px; cursor: pointer; }
+      .btn-group { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🧭 导航栏 -->
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>Siyin</a>
+    <button class="menu-toggle" onclick="alert('Menu')" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <a href="neoprene-laminated-fabric.html">Products</a>
+      <a href="oem-odm.html">OEM &amp; ODM</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://wa.me/8618307510254" class="nav-cta" target="_blank">Chat on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 🕳️ 404 主画面 -->
+<section class="error-container">
+  <div class="wrap">
+    <div class="error-content">
+      <div class="error-code">404</div>
+      <h1>Oops! Page Not Found</h1>
+      <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let us get you back on track.</p>
+      
+      <div class="btn-group">
+        <a href="index.html" class="btn primary">Back to Homepage</a>
+        <a href="contact.html" class="btn ghost">Contact Us Directly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 👣 简版页脚 -->
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Dongguan Siyin Sports Goods Co., Ltd. All Rights Reserved.</span>
+    <span>ISO 9001:2015 &middot; GRS 4.0 Certified Factory</span>
+  </div>
+</footer>
+
+</body>
+</html>
